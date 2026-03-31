@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autopilot &amp; Zero-Touch Onboarding — aydin.consulting</title>
+  <meta name="description" content="Windows Autopilot und Zero-Touch Device Enrollment mit Microsoft Intune. Neue Geräte in Minuten statt Tagen einsatzbereit. Tunahan Aydin, Intune Consultant Berlin.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav aria-label="Hauptnavigation">
+  <div class="nl">aydin<span>.consulting</span></div>
+  <ul class="nk" id="nav-menu" role="list">
+    <li><a href="index.html#pain">Pain Points</a></li>
+    <li><a href="index.html#intune">Intune Deep Dive</a></li>
+    <li><a href="index.html#projects">Projekte</a></li>
+    <li><a href="index.html#exp">Werdegang</a></li>
+    <li><a href="index.html#contact" class="nc">Kontakt</a></li>
+  </ul>
+  <button class="nav-toggle" id="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Menü öffnen">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+
+<main>
+  <div class="detail-hero">
+    <div class="detail-hero-bg" aria-hidden="true"></div>
+    <div class="detail-hero-inner">
+      <a href="index.html#pain" class="back-link">← Alle Pain Points</a>
+      <div class="detail-icon-wrap" style="background:var(--red-light)" aria-hidden="true">💻</div>
+      <div class="detail-badge">Autopilot &amp; Zero-Touch</div>
+      <h1>Neue Geräte in <span class="acc">Minuten</span> statt Tagen</h1>
+      <p class="lead">Auspacken, einschalten, anmelden — fertig. Mit Windows Autopilot und Zero-Touch Enrollment konfiguriert sich ein neues Gerät vollautomatisch, ohne dass die IT-Abteilung es auch nur in der Hand hatte.</p>
+    </div>
+  </div>
+
+  <section class="detail-section">
+    <div class="detail-section-inner">
+      <h2>Das Problem</h2>
+      <p class="section-intro">Manuelle Gerätekonfiguration ist teuer, fehleranfällig und blockiert die IT bei jedem neuen Mitarbeiter oder Hardware-Refresh.</p>
+      <div class="problem-block">
+        <p>Ein IT-Admin verbringt im Schnitt 2–4 Stunden pro Gerät: Image erstellen, Software installieren, Einstellungen vornehmen, testen, übergeben. Bei 50 neuen Geräten im Quartal summiert das sich zu Vollzeit-Arbeit — die eigentlich nicht nötig wäre.</p>
+        <p>Bei Remote-Mitarbeitern wird es noch komplizierter: Gerät einschicken, konfigurieren, zurückschicken — oder VPN und Fernzugriff für die Ersteinrichtung. Das Onboarding neuer Kollegen dauert oft mehrere Tage.</p>
+        <div class="problem-symptoms">
+          <div class="symptom"><span class="symptom-icon">⚠️</span>Jedes Gerät wird einzeln manuell konfiguriert — keine Skalierbarkeit</div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span>Images veralten schnell und müssen regelmäßig neu erstellt werden</div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span>Remote-Onboarding erfordert Geräte-Versand oder IT-Präsenz</div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span>Konfigurationsfehler bei der Ersteinrichtung führen zu Folge-Tickets</div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span>Kein standardisierter Prozess — jeder Admin macht es ein bisschen anders</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-section alt">
+    <div class="detail-section-inner">
+      <h2>Mein Ansatz</h2>
+      <p class="section-intro">Von der Autopilot-Konzeption bis zum produktiven Gerät — ein vollständig automatisierter Enrollment-Prozess.</p>
+      <div class="steps-grid">
+        <div class="step"><div class="step-num">1</div><div class="step-body"><h4>Autopilot-Profil konfigurieren</h4><p>User-Driven (Mitarbeiter richtet selbst ein) oder Self-Deploying (Shared Device / Kiosk). Deployment-Profil mit Naming Convention, OOBE-Skip und User-Typ (Azure AD Joined).</p></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-body"><h4>Hardware Hash Import</h4><p>Prozess für Hardware-Hash-Erfassung direkt beim OEM oder via PowerShell-Script (Get-WindowsAutoPilotInfo). Import in Intune/Autopilot-Service.</p></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-body"><h4>Enrollment Status Page (ESP) konfigurieren</h4><p>ESP zeigt dem Nutzer den Fortschritt während des Enrollments. Kritische Apps blockieren die Desktop-Freigabe bis zur vollständigen Installation.</p></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-body"><h4>App-Rollout während Enrollment</h4><p>Required Apps werden während der ESP automatisch deployed. Priorität: Sicherheitssoftware, VPN-Client, Office. Timing und Reihenfolge optimieren.</p></div></div>
+        <div class="step"><div class="step-num">5</div><div class="step-body"><h4>Geräte-Naming &amp; Gruppen-Zuordnung</h4><p>Automatisches Naming nach Convention, dynamische Gruppen-Zuordnung nach Autopilot-Gruppe-Tag. Keine manuelle Nacharbeit nach Enrollment.</p></div></div>
+        <div class="step"><div class="step-num">6</div><div class="step-body"><h4>Testing &amp; Dokumentation</h4><p>End-to-End-Test mit echtem Hardware, Troubleshooting-Guide für häufige ESP-Fehler, Runbook für IT und Procurement-Team.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-section">
+    <div class="detail-section-inner">
+      <h2>Was Sie erhalten</h2>
+      <p class="section-intro">Ein produktiver Zero-Touch-Prozess — Geräte direkt vom OEM an Mitarbeiter, ohne IT-Umweg.</p>
+      <div class="deliverables-grid">
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">🚀</div><div><h4>Autopilot-Konfiguration</h4><p>Fertig konfiguriertes Autopilot-Deployment-Profil (User-Driven oder Self-Deploying) mit ESP und Naming Convention.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">📋</div><div><h4>Hardware-Hash-Import-Guide</h4><p>Prozess für IT und Procurement: Wie Hardware-Hashes erfasst und in Autopilot importiert werden — auch für OEM-Direktlieferungen.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">⚙️</div><div><h4>Optimierte ESP-Konfiguration</h4><p>ESP mit korrekten App-Timeouts, klarer Nutzer-Kommunikation und Fehlerbehandlung. Enrollment dauert typisch 20–40 Minuten.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">📖</div><div><h4>IT-Runbook &amp; Troubleshooting-Guide</h4><p>Dokumentierter Prozess für neue Geräte, häufige Fehler und deren Lösung, Eskalationspfade.</p></div></div>
+      </div>
+      <div class="detail-tech">
+        <div class="detail-tech-label">Eingesetzte Technologien</div>
+        <div class="tg"><span class="tt c">Windows Autopilot</span><span class="tt c">Microsoft Intune</span><span class="tt c">Entra ID</span><span class="tt">ESP</span><span class="tt">Hardware Hash</span><span class="tt">PowerShell</span><span class="tt">OOBE</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-cta">
+    <div class="detail-cta-inner">
+      <h2>Zero-Touch einführen</h2>
+      <p>Zeigen Sie mir Ihren aktuellen Onboarding-Prozess — ich zeige Ihnen, wie der gleiche Ablauf in 30 Minuten statt 4 Stunden geht.</p>
+      <div class="detail-cta-btns">
+        <a href="mailto:t.aydin6195@gmail.com" class="btn bp">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Jetzt anfragen
+        </a>
+        <a href="index.html#pain" class="btn bo">Weitere Pain Points</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>© 2026 Tunahan Aydin</span>
+  <span style="font-family:var(--fm);font-size:11px">Intune &amp; M365 Consultant · Berlin</span>
+</footer>
+<script src="main.js" defer></script>
+</body>
+</html>

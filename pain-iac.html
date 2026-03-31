@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intune als Code mit Terraform — aydin.consulting</title>
+  <meta name="description" content="Intune-Konfiguration als Code mit Terraform und Microsoft Graph API. Versionierung, Staging-Umgebungen und CI/CD für Ihren Intune-Tenant. Tunahan Aydin, Intune Consultant Berlin.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav aria-label="Hauptnavigation">
+  <div class="nl">aydin<span>.consulting</span></div>
+  <ul class="nk" id="nav-menu" role="list">
+    <li><a href="index.html#pain">Pain Points</a></li>
+    <li><a href="index.html#intune">Intune Deep Dive</a></li>
+    <li><a href="index.html#projects">Projekte</a></li>
+    <li><a href="index.html#exp">Werdegang</a></li>
+    <li><a href="index.html#contact" class="nc">Kontakt</a></li>
+  </ul>
+  <button class="nav-toggle" id="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Menü öffnen">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+
+<main>
+  <div class="detail-hero">
+    <div class="detail-hero-bg" aria-hidden="true"></div>
+    <div class="detail-hero-inner">
+      <a href="index.html#pain" class="back-link">← Alle Pain Points</a>
+      <div class="detail-icon-wrap" style="background:var(--green-light)" aria-hidden="true">🏗️</div>
+      <div class="detail-badge">Infrastructure as Code</div>
+      <h1>Intune-Konfiguration als <span class="acc">versionierten Code</span></h1>
+      <p class="lead">Änderungen am Tenant nicht nachvollziehbar, kein Rollback, keine Staging-Umgebung — das muss nicht so sein. Mit Terraform und dem Microsoft Graph Provider wird Ihr Intune-Tenant wie Software verwaltet: versioniert, testbar, wiederherstellbar.</p>
+    </div>
+  </div>
+
+  <section class="detail-section">
+    <div class="detail-section-inner">
+      <h2>Das Problem</h2>
+      <p class="section-intro">Intune wird meist wie ein klassisches Admin-Tool behandelt: klicken, ändern, hoffen dass es funktioniert. Für eine Enterprise-Umgebung ist das nicht tragbar.</p>
+      <div class="problem-block">
+        <p>Wenn eine Policy-Änderung 500 Geräte betrifft und es schiefgeht, möchten Sie die Änderung sofort rückgängig machen. Ohne Git-History und ohne Terraform-State ist das mühsam und fehleranfällig.</p>
+        <p>Ohne Staging-Umgebung werden Änderungen direkt in Production getestet. Ein Tippfehler in einer Compliance Policy kann alle Geräte als non-compliant markieren — und damit Conditional Access für alle sperren.</p>
+        <div class="problem-symptoms">
+          <div class="symptom"><span class="symptom-icon">⚠️</span>Änderungen am Tenant nicht versioniert — wer hat wann was geändert?</div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span>Kein Rollback bei fehlerhaften Policy-Änderungen</div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span>Keine Staging-Umgebung — Änderungen direkt in Production</div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span>Tenant-Konfiguration lebt nur im Portal — bei Tenant-Verlust alles weg</div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span>Kein Review-Prozess: Änderungen brauchen kein zweites Augenpaar</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-section alt">
+    <div class="detail-section-inner">
+      <h2>Mein Ansatz</h2>
+      <p class="section-intro">Vom Terraform-Setup bis zur laufenden CI/CD-Pipeline — Intune IaC in der Praxis.</p>
+      <div class="steps-grid">
+        <div class="step"><div class="step-num">1</div><div class="step-body"><h4>Terraform + Graph Provider Setup</h4><p>Microsoft Graph Terraform Provider konfigurieren, Service Principal mit minimalen Rechten, State-Backend in Azure Blob Storage oder Terraform Cloud.</p></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-body"><h4>Bestehende Konfiguration importieren</h4><p><span style="font-family:var(--fm);font-size:12px;color:var(--accent)">terraform import</span> für existierende Policies, Profile und Gruppen. Schrittweiser Import priorisiert nach Kritikalität.</p></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-body"><h4>Git-Repository-Struktur</h4><p>Modulare Struktur nach Plattform und Policy-Typ. Separate Module für Windows, macOS, iOS, App-Deployment. README und Variablen-Dokumentation.</p></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-body"><h4>Staging &amp; Production trennen</h4><p>Zwei Workspaces oder Branches: <span style="font-family:var(--fm);font-size:12px;color:var(--accent)">staging</span> (Pilot-Gruppe) und <span style="font-family:var(--fm);font-size:12px;color:var(--accent)">production</span> (alle Geräte). Promotion nach erfolgreichen Tests.</p></div></div>
+        <div class="step"><div class="step-num">5</div><div class="step-body"><h4>CI/CD Pipeline</h4><p>GitHub Actions oder Azure DevOps: <span style="font-family:var(--fm);font-size:12px;color:var(--accent)">terraform plan</span> auf PR, manueller Approve, <span style="font-family:var(--fm);font-size:12px;color:var(--accent)">terraform apply</span> nach Merge. Drift-Detection als Scheduled Job.</p></div></div>
+        <div class="step"><div class="step-num">6</div><div class="step-body"><h4>Change Management &amp; Training</h4><p>Pull-Request-Prozess für alle Tenant-Änderungen. Training für das Admin-Team: Terraform-Grundlagen, Review-Workflow, Rollback-Prozedur.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-section">
+    <div class="detail-section-inner">
+      <h2>Was Sie erhalten</h2>
+      <p class="section-intro">Ihr Intune-Tenant unter vollständiger Versionskontrolle — mit CI/CD, Review-Prozess und Rollback in Sekunden.</p>
+      <div class="deliverables-grid">
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">📁</div><div><h4>Terraform-Codebase</h4><p>Vollständige Terraform-Konfiguration Ihres Tenants, modular aufgebaut, dokumentiert und in Git versioniert.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">🔁</div><div><h4>CI/CD-Pipeline</h4><p>GitHub Actions oder Azure DevOps Pipeline: Plan auf PR, Apply nach Merge, Drift-Detection täglich.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">🌿</div><div><h4>Staging-Umgebung</h4><p>Separate Staging-Konfiguration mit eigener Pilotgruppe — keine Änderung mehr direkt in Production.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">🎓</div><div><h4>Team-Training &amp; Dokumentation</h4><p>Terraform-Einführung für Ihr Team, Review-Workflow-Dokumentation, Rollback-Anleitung und Troubleshooting-Guide.</p></div></div>
+      </div>
+      <div class="detail-tech">
+        <div class="detail-tech-label">Eingesetzte Technologien</div>
+        <div class="tg"><span class="tt c">Terraform</span><span class="tt c">Microsoft Graph API</span><span class="tt c">Git</span><span class="tt">GitHub Actions</span><span class="tt">Azure DevOps</span><span class="tt">PowerShell</span><span class="tt">Azure Blob Storage</span><span class="tt">CI/CD</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-cta">
+    <div class="detail-cta-inner">
+      <h2>IaC für Intune einführen</h2>
+      <p>Ich zeige Ihnen in einem Demo-Call, wie Terraform-IaC für Intune konkret aussieht und welchen Aufwand die Einführung für Ihre Umgebung bedeutet.</p>
+      <div class="detail-cta-btns">
+        <a href="mailto:t.aydin6195@gmail.com" class="btn bp">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Jetzt anfragen
+        </a>
+        <a href="index.html#pain" class="btn bo">Weitere Pain Points</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>© 2026 Tunahan Aydin</span>
+  <span style="font-family:var(--fm);font-size:11px">Intune &amp; M365 Consultant · Berlin</span>
+</footer>
+<script src="main.js" defer></script>
+</body>
+</html>

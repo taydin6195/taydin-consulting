@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App-Paketierung &amp; Deployment — aydin.consulting</title>
+  <meta name="description" content="Automatisierte App-Paketierung mit Win32, PSADT, MSIX. Standardisierte Rollout-Pipelines über Microsoft Intune. Tunahan Aydin, Intune Consultant Berlin.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav aria-label="Hauptnavigation">
+  <div class="nl">aydin<span>.consulting</span></div>
+  <ul class="nk" id="nav-menu" role="list">
+    <li><a href="index.html#pain">Pain Points</a></li>
+    <li><a href="index.html#intune">Intune Deep Dive</a></li>
+    <li><a href="index.html#projects">Projekte</a></li>
+    <li><a href="index.html#exp">Werdegang</a></li>
+    <li><a href="index.html#contact" class="nc">Kontakt</a></li>
+  </ul>
+  <button class="nav-toggle" id="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Menü öffnen">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+
+<main>
+  <div class="detail-hero">
+    <div class="detail-hero-bg" aria-hidden="true"></div>
+    <div class="detail-hero-inner">
+      <a href="index.html#pain" class="back-link">← Alle Pain Points</a>
+      <div class="detail-icon-wrap" style="background:var(--orange-light)" aria-hidden="true">📦</div>
+      <div class="detail-badge">App-Deployment</div>
+      <h1>Software-Rollouts <span class="acc">automatisieren</span></h1>
+      <p class="lead">Manuelle Paketierung, fehlerhafte Silent Installs, wochenlange Wartezeiten — das muss nicht sein. Ich bringe einen standardisierten, skalierbaren App-Deployment-Prozess in Ihren Intune-Tenant.</p>
+    </div>
+  </div>
+
+  <section class="detail-section">
+    <div class="detail-section-inner">
+      <h2>Das Problem</h2>
+      <p class="section-intro">App-Deployment ist oft der größte Zeitfresser im IT-Alltag. Ohne standardisierten Prozess scheitern Rollouts regelmäßig — und niemand weiß warum.</p>
+      <div class="problem-block">
+        <p>Wenn jede App anders paketiert ist, kein Detection-Standard existiert und Silent-Install-Parameter nirgends dokumentiert sind, verbringt die IT mehr Zeit mit App-Troubleshooting als mit strategischer Arbeit.</p>
+        <p>Fachabteilungen warten wochenlang auf Software, die eigentlich in Stunden deployed sein sollte — weil der Prozess fehlt, nicht die Technik.</p>
+        <div class="problem-symptoms">
+          <div class="symptom"><span class="symptom-icon">⚠️</span>Apps werden einzeln per Hand paketiert, kein Template vorhanden</div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span>Silent-Install-Parameter (z.B. /quiet /norestart) nicht dokumentiert</div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span>Detection Rules fehlen oder sind falsch — Intune meldet „installiert", App läuft nicht</div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span>Kein Staging: Apps gehen direkt auf alle Geräte, ohne Pilotgruppe</div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span>Supersedence und Dependency Chains nicht konfiguriert</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-section alt">
+    <div class="detail-section-inner">
+      <h2>Mein Ansatz</h2>
+      <p class="section-intro">Vom App-Inventar bis zum selbstbedienenden Company Portal — ein vollständiger, wartbarer Prozess.</p>
+      <div class="steps-grid">
+        <div class="step"><div class="step-num">1</div><div class="step-body"><h4>App-Inventar &amp; Priorisierung</h4><p>Welche Apps sind im Einsatz, welche sollen als erstes in den standardisierten Prozess? Priorisierung nach Nutzerzahl und Kritikalität.</p></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-body"><h4>Paketierungsstandard definieren</h4><p>Entscheidung Win32 vs. MSIX vs. Store-App je nach Software-Typ. Einheitliche Ordnerstruktur, Versionierung und Naming Convention für alle Pakete.</p></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-body"><h4>PSADT-Templates &amp; Silent-Installs</h4><p>PowerShell App Deployment Toolkit als Basis: Pre-Install-Checks, Silent-Flags, Fehlerbehandlung, Post-Install-Scripts. Wiederverwendbare Templates pro App-Typ.</p></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-body"><h4>Detection Rules &amp; Dependency Chains</h4><p>Zuverlässige Detection via Registry, File oder MSI-Product-Code. Dependency-Konfiguration (z.B. .NET vor App), Supersedence für Updates.</p></div></div>
+        <div class="step"><div class="step-num">5</div><div class="step-body"><h4>Deployment Rings (Staging → Pilot → Broad)</h4><p>Rollout in drei Phasen: Erst IT-Team, dann Early Adopters, dann alle. Automatischer Stopp bei hoher Fehlerrate.</p></div></div>
+        <div class="step"><div class="step-num">6</div><div class="step-body"><h4>Company Portal &amp; Self-Service</h4><p>Verfügbare Apps im Company Portal für Self-Service. Endnutzer installieren selbst, ohne IT-Ticket. Entlastet den Helpdesk spürbar.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-section">
+    <div class="detail-section-inner">
+      <h2>Was Sie erhalten</h2>
+      <p class="section-intro">Ein vollständiger, dokumentierter App-Deployment-Prozess — und ein App-Katalog, der sofort produktiv ist.</p>
+      <div class="deliverables-grid">
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">📦</div><div><h4>Paketierter App-Katalog</h4><p>Ihre priorisierten Apps fertig paketiert: Win32-Pakete mit Detection Rules, Silent-Install-Parametern und Deployment-Konfiguration.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">📄</div><div><h4>Paketierungs-Templates</h4><p>PSADT-Templates und Dokumentation, damit Ihr Team neue Apps eigenständig nach demselben Standard paketieren kann.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">🔁</div><div><h4>Deployment-Rings-Konzept</h4><p>Konfigurierte Staging-Gruppen (IT → Pilot → Broad) mit Rollout-Logik direkt in Intune.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">🏪</div><div><h4>Company Portal Setup</h4><p>Konfiguriertes Company Portal mit Self-Service-Apps, Branding und Kategorisierung.</p></div></div>
+      </div>
+      <div class="detail-tech">
+        <div class="detail-tech-label">Eingesetzte Technologien</div>
+        <div class="tg"><span class="tt c">Microsoft Intune</span><span class="tt c">Win32 Apps</span><span class="tt c">PSADT</span><span class="tt">MSIX</span><span class="tt">IntuneWinAppUtil</span><span class="tt">PowerShell</span><span class="tt">Detection Rules</span><span class="tt">Supersedence</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-cta">
+    <div class="detail-cta-inner">
+      <h2>App-Deployment modernisieren</h2>
+      <p>Zeigen Sie mir Ihren aktuellen Prozess — in einem kurzen Call sehen wir gemeinsam, wo der größte Hebel liegt.</p>
+      <div class="detail-cta-btns">
+        <a href="mailto:t.aydin6195@gmail.com" class="btn bp">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Jetzt anfragen
+        </a>
+        <a href="index.html#pain" class="btn bo">Weitere Pain Points</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>© 2026 Tunahan Aydin</span>
+  <span style="font-family:var(--fm);font-size:11px">Intune &amp; M365 Consultant · Berlin</span>
+</footer>
+<script src="main.js" defer></script>
+</body>
+</html>

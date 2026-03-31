@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intune Tenant Restrukturierung — aydin.consulting</title>
+  <meta name="description" content="Wildgewachsene Intune-Tenants sauber strukturieren: RBAC, Scope Tags, dynamische Gruppen, Naming Conventions. Tunahan Aydin, Microsoft Intune Consultant Berlin.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav aria-label="Hauptnavigation">
+  <div class="nl">aydin<span>.consulting</span></div>
+  <ul class="nk" id="nav-menu" role="list">
+    <li><a href="index.html#pain">Pain Points</a></li>
+    <li><a href="index.html#intune">Intune Deep Dive</a></li>
+    <li><a href="index.html#projects">Projekte</a></li>
+    <li><a href="index.html#exp">Werdegang</a></li>
+    <li><a href="index.html#contact" class="nc">Kontakt</a></li>
+  </ul>
+  <button class="nav-toggle" id="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Menü öffnen">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+
+<main>
+  <!-- Hero -->
+  <div class="detail-hero">
+    <div class="detail-hero-bg" aria-hidden="true"></div>
+    <div class="detail-hero-inner">
+      <a href="index.html#pain" class="back-link">← Alle Pain Points</a>
+      <div class="detail-icon-wrap" style="background:var(--red-light)" aria-hidden="true">🔥</div>
+      <div class="detail-badge">Tenant-Management</div>
+      <h1>Ihr Intune-Tenant ist ein <span class="acc">Wildwuchs</span></h1>
+      <p class="lead">Doppelte Profile, veraltete Policies, keine klare Gruppenstruktur — das ist der Normalzustand in gewachsenen Tenants. Ich bringe Ordnung rein, ohne den laufenden Betrieb zu unterbrechen.</p>
+    </div>
+  </div>
+
+  <!-- Problem -->
+  <section class="detail-section">
+    <div class="detail-section-inner">
+      <h2>Das Problem</h2>
+      <p class="section-intro">In den meisten Unternehmen wächst Intune organisch: Ein Admin fügt ein Profil hinzu, ein anderer eine Policy, niemand dokumentiert. Nach zwei Jahren weiß keiner mehr, was worauf wirkt.</p>
+      <div class="problem-block">
+        <p>Ohne klare Architektur wird Intune zum Risikofeld: Richtlinien greifen auf den falschen Geräten, neue Mitarbeiter bekommen zu viele oder zu wenige Rechte, und jede Änderung ist ein Blindflug.</p>
+        <p>Im schlimmsten Fall führt das zu Compliance-Verstößen — weil niemand nachweisen kann, welche Security-Einstellungen tatsächlich aktiv sind.</p>
+        <div class="problem-symptoms">
+          <div class="symptom"><span class="symptom-icon">⚠️</span>Doppelte oder widersprüchliche Configuration Profiles auf denselben Geräten</div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span>Statische Gruppen statt dynamischer Zuweisungen — Mitarbeiter werden manuell zugeordnet</div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span>Kein RBAC: Alle Admins sehen und ändern alles, kein Scope-Trennung</div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span>Naming-Chaos: Profile heißen „Policy_neu2_final_v3"</div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span>Keine Dokumentation — Wissen liegt bei einzelnen Personen</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Approach -->
+  <section class="detail-section alt">
+    <div class="detail-section-inner">
+      <h2>Mein Ansatz</h2>
+      <p class="section-intro">Strukturierte Sanierung in sechs Schritten — ohne Big-Bang-Umstellung, sondern schrittweise und risikoarm.</p>
+      <div class="steps-grid">
+        <div class="step"><div class="step-num">1</div><div class="step-body"><h4>Tenant-Audit</h4><p>Vollständige Bestandsaufnahme aller Policies, Profile, Apps, Gruppen und Rollen. Identifikation von Duplikaten, Konflikten und ungenutzten Objekten.</p></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-body"><h4>RBAC-Modell entwerfen</h4><p>Definition von Admin-Rollen nach Verantwortlichkeit (Helpdesk, Endpoint-Admin, Security), Zuweisung von Scope Tags pro Team oder Standort.</p></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-body"><h4>Naming Convention festlegen</h4><p>Einheitliches Schema für alle Objekte: Plattform, Typ, Zielgruppe, Version. Beispiel: <span style="font-family:var(--fm);font-size:12px;color:var(--accent)">WIN-CFG-Security-Baseline-v1</span></p></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-body"><h4>Dynamische Gruppen aufbauen</h4><p>Entra-ID-basierte Dynamic Groups nach OS, Abteilung, Compliance-Status und Gerätekategorie. Kein manuelles Pflegen mehr.</p></div></div>
+        <div class="step"><div class="step-num">5</div><div class="step-body"><h4>Policy-Konsolidierung</h4><p>Duplikate zusammenführen, veraltete Objekte archivieren, Konflikte auflösen. Alles getestet in einer Pilot-Gruppe bevor Rollout auf alle Geräte.</p></div></div>
+        <div class="step"><div class="step-num">6</div><div class="step-body"><h4>Dokumentation &amp; Übergabe</h4><p>Runbooks für Admins, Architekturdiagramm des neuen Tenants, Onboarding-Guide für neue IT-Kollegen.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deliverables -->
+  <section class="detail-section">
+    <div class="detail-section-inner">
+      <h2>Was Sie erhalten</h2>
+      <p class="section-intro">Konkrete Ergebnisse — keine PowerPoint-Folien, sondern eine funktionierende, dokumentierte Tenant-Architektur.</p>
+      <div class="deliverables-grid">
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">📋</div><div><h4>Audit-Report</h4><p>Detaillierte Bestandsaufnahme mit allen Konflikten, Duplikaten und Optimierungspotenzialen.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">🏗️</div><div><h4>RBAC-Konzept</h4><p>Dokumentiertes Rollenmodell mit Scope Tags, Zuständigkeiten und Eskalationspfaden.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">✅</div><div><h4>Bereinigte Tenant-Konfiguration</h4><p>Konsolidierte Policies und Profile nach Naming Convention, getestet und deployed.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">📖</div><div><h4>Admin-Runbooks</h4><p>Schritt-für-Schritt-Anleitungen für wiederkehrende Aufgaben: Gerät hinzufügen, Policy ändern, Audit durchführen.</p></div></div>
+      </div>
+      <div class="detail-tech">
+        <div class="detail-tech-label">Eingesetzte Technologien</div>
+        <div class="tg"><span class="tt c">Microsoft Intune</span><span class="tt c">Entra ID</span><span class="tt c">RBAC</span><span class="tt">Scope Tags</span><span class="tt">Dynamic Groups</span><span class="tt">Graph API</span><span class="tt">PowerShell</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="detail-cta">
+    <div class="detail-cta-inner">
+      <h2>Tenant-Audit anfragen</h2>
+      <p>In einem kostenlosen Erstgespräch schauen wir gemeinsam auf Ihren Tenant und schätzen den Aufwand für eine Restrukturierung ein.</p>
+      <div class="detail-cta-btns">
+        <a href="mailto:t.aydin6195@gmail.com" class="btn bp">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Jetzt anfragen
+        </a>
+        <a href="index.html#pain" class="btn bo">Weitere Pain Points</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>© 2026 Tunahan Aydin</span>
+  <span style="font-family:var(--fm);font-size:11px">Intune &amp; M365 Consultant · Berlin</span>
+</footer>
+<script src="main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>macOS &amp; iOS Migration zu Intune — aydin.consulting</title>
+  <meta name="description" content="JAMF zu Intune Migration für macOS und iOS. Apple Business Manager, ADE Enrollment, Cross-Platform MDM unter einem Dach. Tunahan Aydin, Intune Consultant Berlin.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav aria-label="Hauptnavigation">
+  <div class="nl">aydin<span>.consulting</span></div>
+  <ul class="nk" id="nav-menu" role="list">
+    <li><a href="index.html#pain">Pain Points</a></li>
+    <li><a href="index.html#intune">Intune Deep Dive</a></li>
+    <li><a href="index.html#projects">Projekte</a></li>
+    <li><a href="index.html#exp">Werdegang</a></li>
+    <li><a href="index.html#contact" class="nc">Kontakt</a></li>
+  </ul>
+  <button class="nav-toggle" id="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Menü öffnen">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+
+<main>
+  <div class="detail-hero">
+    <div class="detail-hero-bg" aria-hidden="true"></div>
+    <div class="detail-hero-inner">
+      <a href="index.html#pain" class="back-link">← Alle Pain Points</a>
+      <div class="detail-icon-wrap" style="background:var(--orange-light)" aria-hidden="true">🍎</div>
+      <div class="detail-badge">Cross-Platform MDM</div>
+      <h1>macOS &amp; iOS unter <span class="acc">einem Dach</span> in Intune</h1>
+      <p class="lead">Parallele MDM-Systeme für Apple und Windows bedeuten doppelten Aufwand, doppelte Lizenzkosten und inkonsistente Security-Policies. Ich migriere Ihre Apple-Geräte zu Intune — ohne Downtime, ohne Datenverlust.</p>
+    </div>
+  </div>
+
+  <section class="detail-section">
+    <div class="detail-section-inner">
+      <h2>Das Problem</h2>
+      <p class="section-intro">Viele Unternehmen managen Windows-Geräte in Intune und Apple-Geräte parallel in JAMF oder einem anderen MDM. Das erzeugt unnötige Komplexität auf allen Ebenen.</p>
+      <div class="problem-block">
+        <p>Zwei MDM-Systeme bedeuten: doppelte Admin-Oberflächen, unterschiedliche Policy-Standards, separate Lizenzkosten und fehlende Transparenz im Gesamtüberblick. Security-Incidents betreffen alle Plattformen gleichzeitig — der Incident Response Prozess muss aber in zwei Systemen stattfinden.</p>
+        <p>Die Migration ist technisch anspruchsvoll: Apple-Geräte können nicht einfach umingerollt werden, ohne dass der User den Zugang verliert. Ohne Erfahrung ist das Risiko für den laufenden Betrieb hoch.</p>
+        <div class="problem-symptoms">
+          <div class="symptom"><span class="symptom-icon">⚠️</span>Zwei MDM-Systeme (z.B. JAMF + Intune) mit unterschiedlichen Policy-Standards</div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span>Apple-Geräte ohne Compliance Policies — kein Conditional Access möglich</div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span>Kein Apple Business Manager oder ABM nicht mit Intune verbunden</div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span>macOS-Apps werden manuell installiert, kein standardisiertes App-Deployment</div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span>iOS-Geräte ohne App-Protection-Policies für Corporate Data</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-section alt">
+    <div class="detail-section-inner">
+      <h2>Mein Ansatz</h2>
+      <p class="section-intro">Bewährte Migrations-Methodik aus 800+ migrierten Geräten über 4 Länder — keine Ausfallzeiten, kein Datenverlust.</p>
+      <div class="steps-grid">
+        <div class="step"><div class="step-num">1</div><div class="step-body"><h4>Apple Business Manager (ABM) einrichten</h4><p>ABM-Account anlegen oder verbinden, MDM-Server zu Intune ändern. ABM ist die Grundlage für ADE und Managed Apple IDs.</p></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-body"><h4>Enrollment-Profile für macOS &amp; iOS</h4><p>Automated Device Enrollment (ADE) Profile in Intune erstellen. macOS: User Enrollment oder ADE, je nach Gerätetyp. iOS: ADE über ABM für Corporate-Devices.</p></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-body"><h4>macOS Configuration Profiles &amp; Shell Scripts</h4><p>Custom .mobileconfig-Profile für macOS-spezifische Settings (Dock, Finder, Security). Shell Scripts für Software-Installation und System-Konfiguration.</p></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-body"><h4>Migrationsplan: JAMF → Intune</h4><p>Geräte in Wellen migrieren: IT-Team → Pilot → Alle. JAMF-MDM-Profil entfernen, Intune-Enrollment triggern. Nutzer-Kommunikation und Support während der Migration.</p></div></div>
+        <div class="step"><div class="step-num">5</div><div class="step-body"><h4>Platform SSO &amp; Compliance</h4><p>macOS Platform SSO für nahtlose Entra-ID-Anmeldung. Compliance Policies für macOS und iOS — Grundlage für plattformübergreifenden Conditional Access.</p></div></div>
+        <div class="step"><div class="step-num">6</div><div class="step-body"><h4>App-Deployment für Apple-Plattformen</h4><p>iOS/macOS Apps über VPP (Volume Purchase Program) in Intune deployen. Per-App VPN für sicheren Unternehmens-Datenzugriff auf iOS.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-section">
+    <div class="detail-section-inner">
+      <h2>Was Sie erhalten</h2>
+      <p class="section-intro">Alle Apple-Geräte in Intune — einheitliches Management, einheitliche Compliance, eine Administrationsoberfläche.</p>
+      <div class="deliverables-grid">
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">🗓️</div><div><h4>Migrations-Roadmap</h4><p>Phasenplan für die JAMF-zu-Intune-Migration mit Zeitplan, Wellen-Einteilung und Rollback-Plan.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">🍎</div><div><h4>ABM &amp; Enrollment-Konfiguration</h4><p>Verbundener Apple Business Manager, ADE-Enrollment-Profile für macOS und iOS, fertig konfiguriert.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">⚙️</div><div><h4>macOS Profile &amp; Shell Script Bibliothek</h4><p>Wiederverwendbare .mobileconfig-Profile und Shell Scripts für häufige macOS-Konfigurationen.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">🔐</div><div><h4>Cross-Platform Compliance</h4><p>Compliance Policies für macOS und iOS, die mit Conditional Access zusammenspielen — einheitlicher Security-Standard über alle Plattformen.</p></div></div>
+      </div>
+      <div class="detail-tech">
+        <div class="detail-tech-label">Eingesetzte Technologien</div>
+        <div class="tg"><span class="tt c">Microsoft Intune</span><span class="tt c">Apple Business Manager</span><span class="tt c">ADE</span><span class="tt">JAMF</span><span class="tt">macOS</span><span class="tt">iOS</span><span class="tt">Platform SSO</span><span class="tt">Shell Scripts</span><span class="tt">VPP</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-cta">
+    <div class="detail-cta-inner">
+      <h2>Apple-Migration planen</h2>
+      <p>Ich kenne den Migrationsprozess aus 800+ Geräten — lassen Sie uns gemeinsam den schnellsten Weg für Ihre Umgebung finden.</p>
+      <div class="detail-cta-btns">
+        <a href="mailto:t.aydin6195@gmail.com" class="btn bp">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Jetzt anfragen
+        </a>
+        <a href="index.html#pain" class="btn bo">Weitere Pain Points</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>© 2026 Tunahan Aydin</span>
+  <span style="font-family:var(--fm);font-size:11px">Intune &amp; M365 Consultant · Berlin</span>
+</footer>
+<script src="main.js" defer></script>
+</body>
+</html>
