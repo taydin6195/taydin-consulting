@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Endpoint Compliance &amp; Security — aydin.consulting</title>
   <meta name="description" content="Layered Compliance Framework mit Defender for Endpoint, Conditional Access und Security Baselines. Tunahan Aydin, Intune Security Consultant Berlin.">
+  <script>(function(){var l=localStorage.getItem('lang')||'de';document.documentElement.lang=l;document.documentElement.dataset.lang=l;})();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -13,14 +14,15 @@
 <body>
 
 <nav aria-label="Hauptnavigation">
-  <div class="nl">aydin<span>.consulting</span></div>
+  <a href="index.html" class="nl" aria-label="aydin.consulting">aydin<span>.consulting</span></a>
   <ul class="nk" id="nav-menu" role="list">
     <li><a href="index.html#pain">Pain Points</a></li>
     <li><a href="index.html#intune">Intune Deep Dive</a></li>
-    <li><a href="index.html#projects">Projekte</a></li>
-    <li><a href="index.html#exp">Werdegang</a></li>
-    <li><a href="index.html#contact" class="nc">Kontakt</a></li>
+    <li><a href="index.html#projects" data-de="Projekte" data-en="Projects">Projekte</a></li>
+    <li><a href="index.html#exp" data-de="Werdegang" data-en="Experience">Werdegang</a></li>
+    <li><a href="index.html#contact" class="nc" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
   </ul>
+  <button class="lang-toggle" id="lang-toggle" aria-label="Switch to English">EN</button>
   <button class="nav-toggle" id="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Menü öffnen">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
   </button>
@@ -30,27 +32,27 @@
   <div class="detail-hero">
     <div class="detail-hero-bg" aria-hidden="true"></div>
     <div class="detail-hero-inner">
-      <a href="index.html#pain" class="back-link">← Alle Pain Points</a>
+      <a href="index.html#pain" class="back-link" data-de="← Alle Pain Points" data-en="← All Pain Points">← Alle Pain Points</a>
       <div class="detail-icon-wrap" style="background:var(--blue-light)" aria-hidden="true">🔓</div>
-      <div class="detail-badge">Security &amp; Compliance</div>
-      <h1>Nachweisbare <span class="acc">Endpoint-Compliance</span> aufbauen</h1>
-      <p class="lead">Halb eingerichteter Conditional Access, Defender ohne vollständige Abdeckung, Compliance Policies die ins Leere laufen — ein echter Audit würde das auffliegen lassen. Ich schaffe ein belastbares, mehrschichtiges Compliance-Framework.</p>
+      <div class="detail-badge" data-de="Security & Compliance" data-en="Security & Compliance">Security &amp; Compliance</div>
+      <h1 data-de-html="Nachweisbare <span class='acc'>Endpoint-Compliance</span> aufbauen" data-en-html="Build <span class='acc'>Provable Endpoint Compliance</span>">Nachweisbare <span class="acc">Endpoint-Compliance</span> aufbauen</h1>
+      <p class="lead" data-de="Halb eingerichteter Conditional Access, Defender ohne vollständige Abdeckung, Compliance Policies die ins Leere laufen — ein echter Audit würde das auffliegen lassen. Ich schaffe ein belastbares, mehrschichtiges Compliance-Framework." data-en="Half-configured Conditional Access, Defender without full coverage, compliance policies that apply to nothing — a real audit would expose this. I build a robust, layered compliance framework.">Halb eingerichteter Conditional Access, Defender ohne vollständige Abdeckung, Compliance Policies die ins Leere laufen — ein echter Audit würde das auffliegen lassen. Ich schaffe ein belastbares, mehrschichtiges Compliance-Framework.</p>
     </div>
   </div>
 
   <section class="detail-section">
     <div class="detail-section-inner">
-      <h2>Das Problem</h2>
-      <p class="section-intro">Viele Unternehmen haben Compliance-Features in Intune aktiviert — aber nicht vollständig konfiguriert. Das gibt ein falsches Sicherheitsgefühl.</p>
+      <h2 data-de="Das Problem" data-en="The Problem">Das Problem</h2>
+      <p class="section-intro" data-de="Viele Unternehmen haben Compliance-Features in Intune aktiviert — aber nicht vollständig konfiguriert. Das gibt ein falsches Sicherheitsgefühl." data-en="Many organisations have compliance features enabled in Intune — but not fully configured. This creates a false sense of security.">Viele Unternehmen haben Compliance-Features in Intune aktiviert — aber nicht vollständig konfiguriert. Das gibt ein falsches Sicherheitsgefühl.</p>
       <div class="problem-block">
-        <p>Conditional Access blockiert ohne funktionierende Compliance Policies die falschen Geräte oder gar keine. Defender for Endpoint läuft nicht auf allen Endpunkten. Security Baselines sind aktiviert, aber nie validiert.</p>
-        <p>Im nächsten ISO-27001-Audit oder bei einem Sicherheitsvorfall zeigt sich, wie lückenhaft das Fundament tatsächlich ist.</p>
+        <p data-de="Conditional Access blockiert ohne funktionierende Compliance Policies die falschen Geräte oder gar keine. Defender for Endpoint läuft nicht auf allen Endpunkten. Security Baselines sind aktiviert, aber nie validiert." data-en="Conditional Access blocks the wrong devices — or none at all — without working compliance policies. Defender for Endpoint doesn't run on all endpoints. Security baselines are enabled but never validated.">Conditional Access blockiert ohne funktionierende Compliance Policies die falschen Geräte oder gar keine. Defender for Endpoint läuft nicht auf allen Endpunkten. Security Baselines sind aktiviert, aber nie validiert.</p>
+        <p data-de="Im nächsten ISO-27001-Audit oder bei einem Sicherheitsvorfall zeigt sich, wie lückenhaft das Fundament tatsächlich ist." data-en="The next ISO 27001 audit or a security incident will reveal just how fragile the foundation actually is.">Im nächsten ISO-27001-Audit oder bei einem Sicherheitsvorfall zeigt sich, wie lückenhaft das Fundament tatsächlich ist.</p>
         <div class="problem-symptoms">
-          <div class="symptom"><span class="symptom-icon">⚠️</span>Conditional Access eingerichtet, aber Compliance Policies greifen nicht korrekt</div>
-          <div class="symptom"><span class="symptom-icon">⚠️</span>Defender for Endpoint nicht auf allen Geräten onboardet</div>
-          <div class="symptom"><span class="symptom-icon">⚠️</span>Security Baselines aktiviert, aber nie auf Konflikte mit anderen Policies geprüft</div>
-          <div class="symptom"><span class="symptom-icon">⚠️</span>Kein zentrales Compliance-Dashboard — Status nur mühsam manuell prüfbar</div>
-          <div class="symptom"><span class="symptom-icon">⚠️</span>Non-compliant-Geräte bekommen weiterhin Zugriff auf Unternehmensressourcen</div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span><span data-de="Conditional Access eingerichtet, aber Compliance Policies greifen nicht korrekt" data-en="Conditional Access configured, but compliance policies don't apply correctly">Conditional Access eingerichtet, aber Compliance Policies greifen nicht korrekt</span></div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span><span data-de="Defender for Endpoint nicht auf allen Geräten onboardet" data-en="Defender for Endpoint not onboarded on all devices">Defender for Endpoint nicht auf allen Geräten onboardet</span></div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span><span data-de="Security Baselines aktiviert, aber nie auf Konflikte mit anderen Policies geprüft" data-en="Security baselines enabled, but never checked for conflicts with other policies">Security Baselines aktiviert, aber nie auf Konflikte mit anderen Policies geprüft</span></div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span><span data-de="Kein zentrales Compliance-Dashboard — Status nur mühsam manuell prüfbar" data-en="No central compliance dashboard — status only checkable manually with effort">Kein zentrales Compliance-Dashboard — Status nur mühsam manuell prüfbar</span></div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span><span data-de="Non-compliant-Geräte bekommen weiterhin Zugriff auf Unternehmensressourcen" data-en="Non-compliant devices continue to access corporate resources">Non-compliant-Geräte bekommen weiterhin Zugriff auf Unternehmensressourcen</span></div>
         </div>
       </div>
     </div>
@@ -58,31 +60,31 @@
 
   <section class="detail-section alt">
     <div class="detail-section-inner">
-      <h2>Mein Ansatz</h2>
-      <p class="section-intro">Ein mehrschichtiges (Layered) Compliance-Framework, das nachweisbar funktioniert und Audits standhält.</p>
+      <h2 data-de="Mein Ansatz" data-en="My Approach">Mein Ansatz</h2>
+      <p class="section-intro" data-de="Ein mehrschichtiges (Layered) Compliance-Framework, das nachweisbar funktioniert und Audits standhält." data-en="A layered compliance framework that provably works and withstands audits.">Ein mehrschichtiges (Layered) Compliance-Framework, das nachweisbar funktioniert und Audits standhält.</p>
       <div class="steps-grid">
-        <div class="step"><div class="step-num">1</div><div class="step-body"><h4>Compliance-Audit (Ist-Zustand)</h4><p>Welche Compliance Policies existieren, welche greifen tatsächlich? Abgleich Intune-Reports mit realem Gerätestatus. Lücken dokumentieren.</p></div></div>
-        <div class="step"><div class="step-num">2</div><div class="step-body"><h4>Layered Compliance Policies</h4><p>Drei Stufen: Basis (alle Geräte), Erweitert (sensible Daten), Strict (privilegierte Nutzer). Jede Stufe mit klar definierten Anforderungen und Remediation-Aktionen.</p></div></div>
-        <div class="step"><div class="step-num">3</div><div class="step-body"><h4>Defender for Endpoint vollständig onboarden</h4><p>Deployment via Intune auf alle Plattformen (Windows, macOS, iOS). MDE-Compliance-Connector aktivieren, Threat-Level als Compliance-Bedingung.</p></div></div>
-        <div class="step"><div class="step-num">4</div><div class="step-body"><h4>Conditional Access härtnen</h4><p>CA-Policies nach Zero-Trust-Prinzip: Compliant required, MFA erzwingen, Legacy Auth blockieren, Named Locations. Stufenweise Rollout ohne Sperrung aktiver Nutzer.</p></div></div>
-        <div class="step"><div class="step-num">5</div><div class="step-body"><h4>Security Baselines validieren</h4><p>Microsoft Security Baselines oder CIS Benchmarks deployen und auf Konflikte mit bestehenden Policies prüfen. Konflikte auflösen, Abweichungen dokumentieren.</p></div></div>
-        <div class="step"><div class="step-num">6</div><div class="step-body"><h4>Monitoring &amp; Alerting</h4><p>Compliance-Reports in Intune, Defender-Alerts, optionale SIEM-Integration. Automatische Benachrichtigung bei non-compliant-Geräten.</p></div></div>
+        <div class="step"><div class="step-num">1</div><div class="step-body"><h4 data-de="Compliance-Audit (Ist-Zustand)" data-en="Compliance Audit (Current State)">Compliance-Audit (Ist-Zustand)</h4><p data-de="Welche Compliance Policies existieren, welche greifen tatsächlich? Abgleich Intune-Reports mit realem Gerätestatus. Lücken dokumentieren." data-en="Which compliance policies exist, which actually apply? Reconcile Intune reports with real device status. Document gaps.">Welche Compliance Policies existieren, welche greifen tatsächlich? Abgleich Intune-Reports mit realem Gerätestatus. Lücken dokumentieren.</p></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-body"><h4 data-de="Layered Compliance Policies" data-en="Layered Compliance Policies">Layered Compliance Policies</h4><p data-de="Drei Stufen: Basis (alle Geräte), Erweitert (sensible Daten), Strict (privilegierte Nutzer). Jede Stufe mit klar definierten Anforderungen und Remediation-Aktionen." data-en="Three levels: Basic (all devices), Extended (sensitive data), Strict (privileged users). Each level with clearly defined requirements and remediation actions.">Drei Stufen: Basis (alle Geräte), Erweitert (sensible Daten), Strict (privilegierte Nutzer). Jede Stufe mit klar definierten Anforderungen und Remediation-Aktionen.</p></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-body"><h4 data-de="Defender for Endpoint vollständig onboarden" data-en="Fully Onboard Defender for Endpoint">Defender for Endpoint vollständig onboarden</h4><p data-de="Deployment via Intune auf alle Plattformen (Windows, macOS, iOS). MDE-Compliance-Connector aktivieren, Threat-Level als Compliance-Bedingung." data-en="Deployment via Intune to all platforms (Windows, macOS, iOS). Enable MDE compliance connector, threat level as compliance condition.">Deployment via Intune auf alle Plattformen (Windows, macOS, iOS). MDE-Compliance-Connector aktivieren, Threat-Level als Compliance-Bedingung.</p></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-body"><h4 data-de="Conditional Access härtnen" data-en="Harden Conditional Access">Conditional Access härtnen</h4><p data-de="CA-Policies nach Zero-Trust-Prinzip: Compliant required, MFA erzwingen, Legacy Auth blockieren, Named Locations. Stufenweise Rollout ohne Sperrung aktiver Nutzer." data-en="CA policies following Zero Trust principles: compliant required, enforce MFA, block legacy auth, named locations. Phased rollout without locking out active users.">CA-Policies nach Zero-Trust-Prinzip: Compliant required, MFA erzwingen, Legacy Auth blockieren, Named Locations. Stufenweise Rollout ohne Sperrung aktiver Nutzer.</p></div></div>
+        <div class="step"><div class="step-num">5</div><div class="step-body"><h4 data-de="Security Baselines validieren" data-en="Validate Security Baselines">Security Baselines validieren</h4><p data-de="Microsoft Security Baselines oder CIS Benchmarks deployen und auf Konflikte mit bestehenden Policies prüfen. Konflikte auflösen, Abweichungen dokumentieren." data-en="Deploy Microsoft security baselines or CIS benchmarks and check for conflicts with existing policies. Resolve conflicts, document deviations.">Microsoft Security Baselines oder CIS Benchmarks deployen und auf Konflikte mit bestehenden Policies prüfen. Konflikte auflösen, Abweichungen dokumentieren.</p></div></div>
+        <div class="step"><div class="step-num">6</div><div class="step-body"><h4 data-de="Monitoring & Alerting" data-en="Monitoring & Alerting">Monitoring &amp; Alerting</h4><p data-de="Compliance-Reports in Intune, Defender-Alerts, optionale SIEM-Integration. Automatische Benachrichtigung bei non-compliant-Geräten." data-en="Compliance reports in Intune, Defender alerts, optional SIEM integration. Automatic notification for non-compliant devices.">Compliance-Reports in Intune, Defender-Alerts, optionale SIEM-Integration. Automatische Benachrichtigung bei non-compliant-Geräten.</p></div></div>
       </div>
     </div>
   </section>
 
   <section class="detail-section">
     <div class="detail-section-inner">
-      <h2>Was Sie erhalten</h2>
-      <p class="section-intro">Ein belastbares, dokumentiertes Compliance-Framework — auditierbar und operativ wartbar.</p>
+      <h2 data-de="Was Sie erhalten" data-en="What You Get">Was Sie erhalten</h2>
+      <p class="section-intro" data-de="Ein belastbares, dokumentiertes Compliance-Framework — auditierbar und operativ wartbar." data-en="A robust, documented compliance framework — auditable and operationally maintainable.">Ein belastbares, dokumentiertes Compliance-Framework — auditierbar und operativ wartbar.</p>
       <div class="deliverables-grid">
-        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">🔐</div><div><h4>Layered Compliance Framework</h4><p>Drei konfigurierte Compliance-Stufen mit definierten Anforderungen, Remediation-Aktionen und Eskalationspfaden.</p></div></div>
-        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">🛡️</div><div><h4>Defender for Endpoint vollständig deployed</h4><p>Alle Endpunkte onboardet, MDE-Connector mit Intune verbunden, Threat-Level als Compliance-Bedingung aktiv.</p></div></div>
-        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">🔄</div><div><h4>Conditional Access Konzept</h4><p>Dokumentierte CA-Policies nach Zero-Trust-Prinzip, mit Ausnahme-Prozess und Notfall-Zugriffskonzept.</p></div></div>
-        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">📊</div><div><h4>Compliance-Dashboard</h4><p>Konfigurierte Reports und Alerts für kontinuierliches Monitoring des Compliance-Status aller Geräte.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">🔐</div><div><h4 data-de="Layered Compliance Framework" data-en="Layered Compliance Framework">Layered Compliance Framework</h4><p data-de="Drei konfigurierte Compliance-Stufen mit definierten Anforderungen, Remediation-Aktionen und Eskalationspfaden." data-en="Three configured compliance levels with defined requirements, remediation actions and escalation paths.">Drei konfigurierte Compliance-Stufen mit definierten Anforderungen, Remediation-Aktionen und Eskalationspfaden.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">🛡️</div><div><h4 data-de="Defender for Endpoint vollständig deployed" data-en="Defender for Endpoint Fully Deployed">Defender for Endpoint vollständig deployed</h4><p data-de="Alle Endpunkte onboardet, MDE-Connector mit Intune verbunden, Threat-Level als Compliance-Bedingung aktiv." data-en="All endpoints onboarded, MDE connector linked to Intune, threat level active as compliance condition.">Alle Endpunkte onboardet, MDE-Connector mit Intune verbunden, Threat-Level als Compliance-Bedingung aktiv.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">🔄</div><div><h4 data-de="Conditional Access Konzept" data-en="Conditional Access Concept">Conditional Access Konzept</h4><p data-de="Dokumentierte CA-Policies nach Zero-Trust-Prinzip, mit Ausnahme-Prozess und Notfall-Zugriffskonzept." data-en="Documented CA policies following Zero Trust principles, with exception process and emergency access concept.">Dokumentierte CA-Policies nach Zero-Trust-Prinzip, mit Ausnahme-Prozess und Notfall-Zugriffskonzept.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">📊</div><div><h4 data-de="Compliance-Dashboard" data-en="Compliance Dashboard">Compliance-Dashboard</h4><p data-de="Konfigurierte Reports und Alerts für kontinuierliches Monitoring des Compliance-Status aller Geräte." data-en="Configured reports and alerts for continuous monitoring of the compliance status of all devices.">Konfigurierte Reports und Alerts für kontinuierliches Monitoring des Compliance-Status aller Geräte.</p></div></div>
       </div>
       <div class="detail-tech">
-        <div class="detail-tech-label">Eingesetzte Technologien</div>
+        <div class="detail-tech-label" data-de="Eingesetzte Technologien" data-en="Technologies used">Eingesetzte Technologien</div>
         <div class="tg"><span class="tt c">Microsoft Intune</span><span class="tt c">Defender for Endpoint</span><span class="tt c">Conditional Access</span><span class="tt">Entra ID</span><span class="tt">Security Baselines</span><span class="tt">CIS Benchmarks</span><span class="tt">MFA</span></div>
       </div>
     </div>
@@ -90,14 +92,14 @@
 
   <section class="detail-cta">
     <div class="detail-cta-inner">
-      <h2>Compliance-Status prüfen lassen</h2>
-      <p>In einem Erstgespräch schauen wir auf Ihren aktuellen Compliance- und CA-Status und identifizieren die kritischsten Lücken.</p>
+      <h2 data-de="Compliance-Status prüfen lassen" data-en="Get your compliance status reviewed">Compliance-Status prüfen lassen</h2>
+      <p data-de="In einem Erstgespräch schauen wir auf Ihren aktuellen Compliance- und CA-Status und identifizieren die kritischsten Lücken." data-en="In an initial consultation, we'll look at your current compliance and CA status and identify the most critical gaps.">In einem Erstgespräch schauen wir auf Ihren aktuellen Compliance- und CA-Status und identifizieren die kritischsten Lücken.</p>
       <div class="detail-cta-btns">
-        <a href="mailto:t.aydin6195@gmail.com" class="btn bp">
+        <a href="mailto:hello@aydin.consulting" class="btn bp">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          Jetzt anfragen
+          <span data-de="Jetzt anfragen" data-en="Get in touch">Jetzt anfragen</span>
         </a>
-        <a href="index.html#pain" class="btn bo">Weitere Pain Points</a>
+        <a href="index.html#pain" class="btn bo" data-de="Weitere Pain Points" data-en="More Pain Points">Weitere Pain Points</a>
       </div>
     </div>
   </section>

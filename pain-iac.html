@@ -9,18 +9,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>(function(){var l=localStorage.getItem('lang')||'de';document.documentElement.lang=l;document.documentElement.dataset.lang=l;})();</script>
 </head>
 <body>
 
 <nav aria-label="Hauptnavigation">
-  <div class="nl">aydin<span>.consulting</span></div>
+  <a href="index.html" class="nl">aydin<span>.consulting</span></a>
   <ul class="nk" id="nav-menu" role="list">
-    <li><a href="index.html#pain">Pain Points</a></li>
-    <li><a href="index.html#intune">Intune Deep Dive</a></li>
-    <li><a href="index.html#projects">Projekte</a></li>
-    <li><a href="index.html#exp">Werdegang</a></li>
-    <li><a href="index.html#contact" class="nc">Kontakt</a></li>
+    <li><a href="index.html#pain" data-de="Pain Points" data-en="Pain Points">Pain Points</a></li>
+    <li><a href="index.html#intune" data-de="Intune Deep Dive" data-en="Intune Deep Dive">Intune Deep Dive</a></li>
+    <li><a href="index.html#projects" data-de="Projekte" data-en="Projects">Projekte</a></li>
+    <li><a href="index.html#exp" data-de="Werdegang" data-en="Experience">Werdegang</a></li>
+    <li><a href="index.html#contact" class="nc" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
   </ul>
+  <button class="lang-toggle" id="lang-toggle" aria-label="Switch to English">EN</button>
   <button class="nav-toggle" id="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Menü öffnen">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
   </button>
@@ -30,27 +32,27 @@
   <div class="detail-hero">
     <div class="detail-hero-bg" aria-hidden="true"></div>
     <div class="detail-hero-inner">
-      <a href="index.html#pain" class="back-link">← Alle Pain Points</a>
+      <a href="index.html#pain" class="back-link" data-de="← Alle Pain Points" data-en="← All Pain Points">← Alle Pain Points</a>
       <div class="detail-icon-wrap" style="background:var(--green-light)" aria-hidden="true">🏗️</div>
-      <div class="detail-badge">Infrastructure as Code</div>
-      <h1>Intune-Konfiguration als <span class="acc">versionierten Code</span></h1>
-      <p class="lead">Änderungen am Tenant nicht nachvollziehbar, kein Rollback, keine Staging-Umgebung — das muss nicht so sein. Mit Terraform und dem Microsoft Graph Provider wird Ihr Intune-Tenant wie Software verwaltet: versioniert, testbar, wiederherstellbar.</p>
+      <div class="detail-badge" data-de="Infrastructure as Code" data-en="Infrastructure as Code">Infrastructure as Code</div>
+      <h1 data-de-html="Intune-Konfiguration als <span class=&quot;acc&quot;>versionierten Code</span>" data-en-html="Intune configuration as <span class=&quot;acc&quot;>versioned code</span>">Intune-Konfiguration als <span class="acc">versionierten Code</span></h1>
+      <p class="lead" data-de="Änderungen am Tenant nicht nachvollziehbar, kein Rollback, keine Staging-Umgebung — das muss nicht so sein. Mit Terraform und dem Microsoft Graph Provider wird Ihr Intune-Tenant wie Software verwaltet: versioniert, testbar, wiederherstellbar." data-en="Tenant changes not traceable, no rollback, no staging environment — it doesn't have to be this way. With Terraform and the Microsoft Graph Provider, your Intune tenant is managed like software: versioned, testable, recoverable.">Änderungen am Tenant nicht nachvollziehbar, kein Rollback, keine Staging-Umgebung — das muss nicht so sein. Mit Terraform und dem Microsoft Graph Provider wird Ihr Intune-Tenant wie Software verwaltet: versioniert, testbar, wiederherstellbar.</p>
     </div>
   </div>
 
   <section class="detail-section">
     <div class="detail-section-inner">
-      <h2>Das Problem</h2>
-      <p class="section-intro">Intune wird meist wie ein klassisches Admin-Tool behandelt: klicken, ändern, hoffen dass es funktioniert. Für eine Enterprise-Umgebung ist das nicht tragbar.</p>
+      <h2 data-de="Das Problem" data-en="The Problem">Das Problem</h2>
+      <p class="section-intro" data-de="Intune wird meist wie ein klassisches Admin-Tool behandelt: klicken, ändern, hoffen dass es funktioniert. Für eine Enterprise-Umgebung ist das nicht tragbar." data-en="Intune is usually treated like a classic admin tool: click, change, hope it works. For an enterprise environment, that's not sustainable.">Intune wird meist wie ein klassisches Admin-Tool behandelt: klicken, ändern, hoffen dass es funktioniert. Für eine Enterprise-Umgebung ist das nicht tragbar.</p>
       <div class="problem-block">
-        <p>Wenn eine Policy-Änderung 500 Geräte betrifft und es schiefgeht, möchten Sie die Änderung sofort rückgängig machen. Ohne Git-History und ohne Terraform-State ist das mühsam und fehleranfällig.</p>
-        <p>Ohne Staging-Umgebung werden Änderungen direkt in Production getestet. Ein Tippfehler in einer Compliance Policy kann alle Geräte als non-compliant markieren — und damit Conditional Access für alle sperren.</p>
+        <p data-de="Wenn eine Policy-Änderung 500 Geräte betrifft und es schiefgeht, möchten Sie die Änderung sofort rückgängig machen. Ohne Git-History und ohne Terraform-State ist das mühsam und fehleranfällig." data-en="When a policy change affects 500 devices and something goes wrong, you want to revert it immediately. Without Git history and without Terraform state, that's tedious and error-prone.">Wenn eine Policy-Änderung 500 Geräte betrifft und es schiefgeht, möchten Sie die Änderung sofort rückgängig machen. Ohne Git-History und ohne Terraform-State ist das mühsam und fehleranfällig.</p>
+        <p data-de="Ohne Staging-Umgebung werden Änderungen direkt in Production getestet. Ein Tippfehler in einer Compliance Policy kann alle Geräte als non-compliant markieren — und damit Conditional Access für alle sperren." data-en="Without a staging environment, changes are tested directly in production. A typo in a compliance policy can mark all devices as non-compliant — locking out Conditional Access for everyone.">Ohne Staging-Umgebung werden Änderungen direkt in Production getestet. Ein Tippfehler in einer Compliance Policy kann alle Geräte als non-compliant markieren — und damit Conditional Access für alle sperren.</p>
         <div class="problem-symptoms">
-          <div class="symptom"><span class="symptom-icon">⚠️</span>Änderungen am Tenant nicht versioniert — wer hat wann was geändert?</div>
-          <div class="symptom"><span class="symptom-icon">⚠️</span>Kein Rollback bei fehlerhaften Policy-Änderungen</div>
-          <div class="symptom"><span class="symptom-icon">⚠️</span>Keine Staging-Umgebung — Änderungen direkt in Production</div>
-          <div class="symptom"><span class="symptom-icon">⚠️</span>Tenant-Konfiguration lebt nur im Portal — bei Tenant-Verlust alles weg</div>
-          <div class="symptom"><span class="symptom-icon">⚠️</span>Kein Review-Prozess: Änderungen brauchen kein zweites Augenpaar</div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span><span data-de="Änderungen am Tenant nicht versioniert — wer hat wann was geändert?" data-en="Tenant changes not versioned — who changed what and when?">Änderungen am Tenant nicht versioniert — wer hat wann was geändert?</span></div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span><span data-de="Kein Rollback bei fehlerhaften Policy-Änderungen" data-en="No rollback for faulty policy changes">Kein Rollback bei fehlerhaften Policy-Änderungen</span></div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span><span data-de="Keine Staging-Umgebung — Änderungen direkt in Production" data-en="No staging environment — changes go directly to production">Keine Staging-Umgebung — Änderungen direkt in Production</span></div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span><span data-de="Tenant-Konfiguration lebt nur im Portal — bei Tenant-Verlust alles weg" data-en="Tenant configuration lives only in the portal — everything lost if tenant is lost">Tenant-Konfiguration lebt nur im Portal — bei Tenant-Verlust alles weg</span></div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span><span data-de="Kein Review-Prozess: Änderungen brauchen kein zweites Augenpaar" data-en="No review process: changes require no second pair of eyes">Kein Review-Prozess: Änderungen brauchen kein zweites Augenpaar</span></div>
         </div>
       </div>
     </div>
@@ -58,31 +60,31 @@
 
   <section class="detail-section alt">
     <div class="detail-section-inner">
-      <h2>Mein Ansatz</h2>
-      <p class="section-intro">Vom Terraform-Setup bis zur laufenden CI/CD-Pipeline — Intune IaC in der Praxis.</p>
+      <h2 data-de="Mein Ansatz" data-en="My Approach">Mein Ansatz</h2>
+      <p class="section-intro" data-de="Vom Terraform-Setup bis zur laufenden CI/CD-Pipeline — Intune IaC in der Praxis." data-en="From Terraform setup to a running CI/CD pipeline — Intune IaC in practice.">Vom Terraform-Setup bis zur laufenden CI/CD-Pipeline — Intune IaC in der Praxis.</p>
       <div class="steps-grid">
-        <div class="step"><div class="step-num">1</div><div class="step-body"><h4>Terraform + Graph Provider Setup</h4><p>Microsoft Graph Terraform Provider konfigurieren, Service Principal mit minimalen Rechten, State-Backend in Azure Blob Storage oder Terraform Cloud.</p></div></div>
-        <div class="step"><div class="step-num">2</div><div class="step-body"><h4>Bestehende Konfiguration importieren</h4><p><span style="font-family:var(--fm);font-size:12px;color:var(--accent)">terraform import</span> für existierende Policies, Profile und Gruppen. Schrittweiser Import priorisiert nach Kritikalität.</p></div></div>
-        <div class="step"><div class="step-num">3</div><div class="step-body"><h4>Git-Repository-Struktur</h4><p>Modulare Struktur nach Plattform und Policy-Typ. Separate Module für Windows, macOS, iOS, App-Deployment. README und Variablen-Dokumentation.</p></div></div>
-        <div class="step"><div class="step-num">4</div><div class="step-body"><h4>Staging &amp; Production trennen</h4><p>Zwei Workspaces oder Branches: <span style="font-family:var(--fm);font-size:12px;color:var(--accent)">staging</span> (Pilot-Gruppe) und <span style="font-family:var(--fm);font-size:12px;color:var(--accent)">production</span> (alle Geräte). Promotion nach erfolgreichen Tests.</p></div></div>
-        <div class="step"><div class="step-num">5</div><div class="step-body"><h4>CI/CD Pipeline</h4><p>GitHub Actions oder Azure DevOps: <span style="font-family:var(--fm);font-size:12px;color:var(--accent)">terraform plan</span> auf PR, manueller Approve, <span style="font-family:var(--fm);font-size:12px;color:var(--accent)">terraform apply</span> nach Merge. Drift-Detection als Scheduled Job.</p></div></div>
-        <div class="step"><div class="step-num">6</div><div class="step-body"><h4>Change Management &amp; Training</h4><p>Pull-Request-Prozess für alle Tenant-Änderungen. Training für das Admin-Team: Terraform-Grundlagen, Review-Workflow, Rollback-Prozedur.</p></div></div>
+        <div class="step"><div class="step-num">1</div><div class="step-body"><h4 data-de="Terraform + Graph Provider Setup" data-en="Terraform + Graph Provider Setup">Terraform + Graph Provider Setup</h4><p data-de="Microsoft Graph Terraform Provider konfigurieren, Service Principal mit minimalen Rechten, State-Backend in Azure Blob Storage oder Terraform Cloud." data-en="Configure the Microsoft Graph Terraform Provider, service principal with minimal permissions, state backend in Azure Blob Storage or Terraform Cloud.">Microsoft Graph Terraform Provider konfigurieren, Service Principal mit minimalen Rechten, State-Backend in Azure Blob Storage oder Terraform Cloud.</p></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-body"><h4 data-de="Bestehende Konfiguration importieren" data-en="Import existing configuration">Bestehende Konfiguration importieren</h4><p><span style="font-family:var(--fm);font-size:12px;color:var(--accent)">terraform import</span> <span data-de="für existierende Policies, Profile und Gruppen. Schrittweiser Import priorisiert nach Kritikalität." data-en="for existing policies, profiles and groups. Incremental import prioritised by criticality.">für existierende Policies, Profile und Gruppen. Schrittweiser Import priorisiert nach Kritikalität.</span></p></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-body"><h4 data-de="Git-Repository-Struktur" data-en="Git repository structure">Git-Repository-Struktur</h4><p data-de="Modulare Struktur nach Plattform und Policy-Typ. Separate Module für Windows, macOS, iOS, App-Deployment. README und Variablen-Dokumentation." data-en="Modular structure by platform and policy type. Separate modules for Windows, macOS, iOS, app deployment. README and variable documentation.">Modulare Struktur nach Plattform und Policy-Typ. Separate Module für Windows, macOS, iOS, App-Deployment. README und Variablen-Dokumentation.</p></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-body"><h4 data-de="Staging &amp; Production trennen" data-en="Separate staging &amp; production">Staging &amp; Production trennen</h4><p><span data-de="Zwei Workspaces oder Branches:" data-en="Two workspaces or branches:">Zwei Workspaces oder Branches:</span> <span style="font-family:var(--fm);font-size:12px;color:var(--accent)">staging</span> <span data-de="(Pilot-Gruppe) und" data-en="(pilot group) and">(Pilot-Gruppe) und</span> <span style="font-family:var(--fm);font-size:12px;color:var(--accent)">production</span> <span data-de="(alle Geräte). Promotion nach erfolgreichen Tests." data-en="(all devices). Promotion after successful tests.">(alle Geräte). Promotion nach erfolgreichen Tests.</span></p></div></div>
+        <div class="step"><div class="step-num">5</div><div class="step-body"><h4 data-de="CI/CD Pipeline" data-en="CI/CD Pipeline">CI/CD Pipeline</h4><p><span data-de="GitHub Actions oder Azure DevOps:" data-en="GitHub Actions or Azure DevOps:">GitHub Actions oder Azure DevOps:</span> <span style="font-family:var(--fm);font-size:12px;color:var(--accent)">terraform plan</span> <span data-de="auf PR, manueller Approve," data-en="on PR, manual approval,">auf PR, manueller Approve,</span> <span style="font-family:var(--fm);font-size:12px;color:var(--accent)">terraform apply</span> <span data-de="nach Merge. Drift-Detection als Scheduled Job." data-en="after merge. Drift detection as scheduled job.">nach Merge. Drift-Detection als Scheduled Job.</span></p></div></div>
+        <div class="step"><div class="step-num">6</div><div class="step-body"><h4 data-de="Change Management &amp; Training" data-en="Change Management &amp; Training">Change Management &amp; Training</h4><p data-de="Pull-Request-Prozess für alle Tenant-Änderungen. Training für das Admin-Team: Terraform-Grundlagen, Review-Workflow, Rollback-Prozedur." data-en="Pull request process for all tenant changes. Training for the admin team: Terraform basics, review workflow, rollback procedure.">Pull-Request-Prozess für alle Tenant-Änderungen. Training für das Admin-Team: Terraform-Grundlagen, Review-Workflow, Rollback-Prozedur.</p></div></div>
       </div>
     </div>
   </section>
 
   <section class="detail-section">
     <div class="detail-section-inner">
-      <h2>Was Sie erhalten</h2>
-      <p class="section-intro">Ihr Intune-Tenant unter vollständiger Versionskontrolle — mit CI/CD, Review-Prozess und Rollback in Sekunden.</p>
+      <h2 data-de="Was Sie erhalten" data-en="What You Get">Was Sie erhalten</h2>
+      <p class="section-intro" data-de="Ihr Intune-Tenant unter vollständiger Versionskontrolle — mit CI/CD, Review-Prozess und Rollback in Sekunden." data-en="Your Intune tenant under full version control — with CI/CD, review process and rollback in seconds.">Ihr Intune-Tenant unter vollständiger Versionskontrolle — mit CI/CD, Review-Prozess und Rollback in Sekunden.</p>
       <div class="deliverables-grid">
-        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">📁</div><div><h4>Terraform-Codebase</h4><p>Vollständige Terraform-Konfiguration Ihres Tenants, modular aufgebaut, dokumentiert und in Git versioniert.</p></div></div>
-        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">🔁</div><div><h4>CI/CD-Pipeline</h4><p>GitHub Actions oder Azure DevOps Pipeline: Plan auf PR, Apply nach Merge, Drift-Detection täglich.</p></div></div>
-        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">🌿</div><div><h4>Staging-Umgebung</h4><p>Separate Staging-Konfiguration mit eigener Pilotgruppe — keine Änderung mehr direkt in Production.</p></div></div>
-        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">🎓</div><div><h4>Team-Training &amp; Dokumentation</h4><p>Terraform-Einführung für Ihr Team, Review-Workflow-Dokumentation, Rollback-Anleitung und Troubleshooting-Guide.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">📁</div><div><h4 data-de="Terraform-Codebase" data-en="Terraform Codebase">Terraform-Codebase</h4><p data-de="Vollständige Terraform-Konfiguration Ihres Tenants, modular aufgebaut, dokumentiert und in Git versioniert." data-en="Complete Terraform configuration of your tenant, modularly structured, documented and versioned in Git.">Vollständige Terraform-Konfiguration Ihres Tenants, modular aufgebaut, dokumentiert und in Git versioniert.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">🔁</div><div><h4 data-de="CI/CD-Pipeline" data-en="CI/CD Pipeline">CI/CD-Pipeline</h4><p data-de="GitHub Actions oder Azure DevOps Pipeline: Plan auf PR, Apply nach Merge, Drift-Detection täglich." data-en="GitHub Actions or Azure DevOps pipeline: plan on PR, apply after merge, drift detection daily.">GitHub Actions oder Azure DevOps Pipeline: Plan auf PR, Apply nach Merge, Drift-Detection täglich.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">🌿</div><div><h4 data-de="Staging-Umgebung" data-en="Staging Environment">Staging-Umgebung</h4><p data-de="Separate Staging-Konfiguration mit eigener Pilotgruppe — keine Änderung mehr direkt in Production." data-en="Separate staging configuration with its own pilot group — no more changes directly in production.">Separate Staging-Konfiguration mit eigener Pilotgruppe — keine Änderung mehr direkt in Production.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">🎓</div><div><h4 data-de="Team-Training &amp; Dokumentation" data-en="Team Training &amp; Documentation">Team-Training &amp; Dokumentation</h4><p data-de="Terraform-Einführung für Ihr Team, Review-Workflow-Dokumentation, Rollback-Anleitung und Troubleshooting-Guide." data-en="Terraform introduction for your team, review workflow documentation, rollback guide and troubleshooting guide.">Terraform-Einführung für Ihr Team, Review-Workflow-Dokumentation, Rollback-Anleitung und Troubleshooting-Guide.</p></div></div>
       </div>
       <div class="detail-tech">
-        <div class="detail-tech-label">Eingesetzte Technologien</div>
+        <div class="detail-tech-label" data-de="Eingesetzte Technologien" data-en="Technologies Used">Eingesetzte Technologien</div>
         <div class="tg"><span class="tt c">Terraform</span><span class="tt c">Microsoft Graph API</span><span class="tt c">Git</span><span class="tt">GitHub Actions</span><span class="tt">Azure DevOps</span><span class="tt">PowerShell</span><span class="tt">Azure Blob Storage</span><span class="tt">CI/CD</span></div>
       </div>
     </div>
@@ -90,14 +92,14 @@
 
   <section class="detail-cta">
     <div class="detail-cta-inner">
-      <h2>IaC für Intune einführen</h2>
-      <p>Ich zeige Ihnen in einem Demo-Call, wie Terraform-IaC für Intune konkret aussieht und welchen Aufwand die Einführung für Ihre Umgebung bedeutet.</p>
+      <h2 data-de="IaC für Intune einführen" data-en="Introduce IaC for Intune">IaC für Intune einführen</h2>
+      <p data-de="Ich zeige Ihnen in einem Demo-Call, wie Terraform-IaC für Intune konkret aussieht und welchen Aufwand die Einführung für Ihre Umgebung bedeutet." data-en="I'll show you in a demo call what Terraform IaC for Intune looks like in practice and what the implementation effort means for your environment.">Ich zeige Ihnen in einem Demo-Call, wie Terraform-IaC für Intune konkret aussieht und welchen Aufwand die Einführung für Ihre Umgebung bedeutet.</p>
       <div class="detail-cta-btns">
-        <a href="mailto:t.aydin6195@gmail.com" class="btn bp">
+        <a href="mailto:hello@aydin.consulting" class="btn bp">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          Jetzt anfragen
+          <span data-de="Jetzt anfragen" data-en="Get in touch">Jetzt anfragen</span>
         </a>
-        <a href="index.html#pain" class="btn bo">Weitere Pain Points</a>
+        <a href="index.html#pain" class="btn bo" data-de="Weitere Pain Points" data-en="More Pain Points">Weitere Pain Points</a>
       </div>
     </div>
   </section>
@@ -105,7 +107,7 @@
 
 <footer>
   <span>© 2026 Tunahan Aydin</span>
-  <span style="font-family:var(--fm);font-size:11px">Intune &amp; M365 Consultant · Berlin</span>
+  <span style="font-family:var(--fm);font-size:11px" data-de="Intune &amp; M365 Consultant · Berlin" data-en="Intune &amp; M365 Consultant · Berlin">Intune &amp; M365 Consultant · Berlin</span>
 </footer>
 <script src="main.js" defer></script>
 </body>

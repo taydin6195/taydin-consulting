@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Autopilot &amp; Zero-Touch Onboarding — aydin.consulting</title>
   <meta name="description" content="Windows Autopilot und Zero-Touch Device Enrollment mit Microsoft Intune. Neue Geräte in Minuten statt Tagen einsatzbereit. Tunahan Aydin, Intune Consultant Berlin.">
+  <script>(function(){var l=localStorage.getItem('lang')||'de';document.documentElement.lang=l;document.documentElement.dataset.lang=l;})();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -13,14 +14,15 @@
 <body>
 
 <nav aria-label="Hauptnavigation">
-  <div class="nl">aydin<span>.consulting</span></div>
+  <a href="index.html" class="nl" aria-label="aydin.consulting">aydin<span>.consulting</span></a>
   <ul class="nk" id="nav-menu" role="list">
     <li><a href="index.html#pain">Pain Points</a></li>
     <li><a href="index.html#intune">Intune Deep Dive</a></li>
-    <li><a href="index.html#projects">Projekte</a></li>
-    <li><a href="index.html#exp">Werdegang</a></li>
-    <li><a href="index.html#contact" class="nc">Kontakt</a></li>
+    <li><a href="index.html#projects" data-de="Projekte" data-en="Projects">Projekte</a></li>
+    <li><a href="index.html#exp" data-de="Werdegang" data-en="Experience">Werdegang</a></li>
+    <li><a href="index.html#contact" class="nc" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
   </ul>
+  <button class="lang-toggle" id="lang-toggle" aria-label="Switch to English">EN</button>
   <button class="nav-toggle" id="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Menü öffnen">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
   </button>
@@ -30,27 +32,27 @@
   <div class="detail-hero">
     <div class="detail-hero-bg" aria-hidden="true"></div>
     <div class="detail-hero-inner">
-      <a href="index.html#pain" class="back-link">← Alle Pain Points</a>
+      <a href="index.html#pain" class="back-link" data-de="← Alle Pain Points" data-en="← All Pain Points">← Alle Pain Points</a>
       <div class="detail-icon-wrap" style="background:var(--red-light)" aria-hidden="true">💻</div>
-      <div class="detail-badge">Autopilot &amp; Zero-Touch</div>
-      <h1>Neue Geräte in <span class="acc">Minuten</span> statt Tagen</h1>
-      <p class="lead">Auspacken, einschalten, anmelden — fertig. Mit Windows Autopilot und Zero-Touch Enrollment konfiguriert sich ein neues Gerät vollautomatisch, ohne dass die IT-Abteilung es auch nur in der Hand hatte.</p>
+      <div class="detail-badge" data-de="Autopilot & Zero-Touch" data-en="Autopilot & Zero-Touch">Autopilot &amp; Zero-Touch</div>
+      <h1 data-de-html="Neue Geräte in <span class='acc'>Minuten</span> statt Tagen" data-en-html="New Devices Ready in <span class='acc'>Minutes</span>, Not Days">Neue Geräte in <span class="acc">Minuten</span> statt Tagen</h1>
+      <p class="lead" data-de="Auspacken, einschalten, anmelden — fertig. Mit Windows Autopilot und Zero-Touch Enrollment konfiguriert sich ein neues Gerät vollautomatisch, ohne dass die IT-Abteilung es auch nur in der Hand hatte." data-en="Unbox, power on, sign in — done. With Windows Autopilot and zero-touch enrollment, a new device configures itself fully automatically, without IT ever having to touch it.">Auspacken, einschalten, anmelden — fertig. Mit Windows Autopilot und Zero-Touch Enrollment konfiguriert sich ein neues Gerät vollautomatisch, ohne dass die IT-Abteilung es auch nur in der Hand hatte.</p>
     </div>
   </div>
 
   <section class="detail-section">
     <div class="detail-section-inner">
-      <h2>Das Problem</h2>
-      <p class="section-intro">Manuelle Gerätekonfiguration ist teuer, fehleranfällig und blockiert die IT bei jedem neuen Mitarbeiter oder Hardware-Refresh.</p>
+      <h2 data-de="Das Problem" data-en="The Problem">Das Problem</h2>
+      <p class="section-intro" data-de="Manuelle Gerätekonfiguration ist teuer, fehleranfällig und blockiert die IT bei jedem neuen Mitarbeiter oder Hardware-Refresh." data-en="Manual device configuration is expensive, error-prone and blocks IT with every new hire or hardware refresh.">Manuelle Gerätekonfiguration ist teuer, fehleranfällig und blockiert die IT bei jedem neuen Mitarbeiter oder Hardware-Refresh.</p>
       <div class="problem-block">
-        <p>Ein IT-Admin verbringt im Schnitt 2–4 Stunden pro Gerät: Image erstellen, Software installieren, Einstellungen vornehmen, testen, übergeben. Bei 50 neuen Geräten im Quartal summiert das sich zu Vollzeit-Arbeit — die eigentlich nicht nötig wäre.</p>
-        <p>Bei Remote-Mitarbeitern wird es noch komplizierter: Gerät einschicken, konfigurieren, zurückschicken — oder VPN und Fernzugriff für die Ersteinrichtung. Das Onboarding neuer Kollegen dauert oft mehrere Tage.</p>
+        <p data-de="Ein IT-Admin verbringt im Schnitt 2–4 Stunden pro Gerät: Image erstellen, Software installieren, Einstellungen vornehmen, testen, übergeben. Bei 50 neuen Geräten im Quartal summiert das sich zu Vollzeit-Arbeit — die eigentlich nicht nötig wäre." data-en="An IT admin spends an average of 2–4 hours per device: creating images, installing software, configuring settings, testing, handing over. With 50 new devices per quarter, that adds up to full-time work — that wouldn't be necessary.">Ein IT-Admin verbringt im Schnitt 2–4 Stunden pro Gerät: Image erstellen, Software installieren, Einstellungen vornehmen, testen, übergeben. Bei 50 neuen Geräten im Quartal summiert das sich zu Vollzeit-Arbeit — die eigentlich nicht nötig wäre.</p>
+        <p data-de="Bei Remote-Mitarbeitern wird es noch komplizierter: Gerät einschicken, konfigurieren, zurückschicken — oder VPN und Fernzugriff für die Ersteinrichtung. Das Onboarding neuer Kollegen dauert oft mehrere Tage." data-en="For remote workers it gets even more complicated: ship the device, configure it, ship it back — or set up VPN and remote access for initial configuration. Onboarding new colleagues often takes several days.">Bei Remote-Mitarbeitern wird es noch komplizierter: Gerät einschicken, konfigurieren, zurückschicken — oder VPN und Fernzugriff für die Ersteinrichtung. Das Onboarding neuer Kollegen dauert oft mehrere Tage.</p>
         <div class="problem-symptoms">
-          <div class="symptom"><span class="symptom-icon">⚠️</span>Jedes Gerät wird einzeln manuell konfiguriert — keine Skalierbarkeit</div>
-          <div class="symptom"><span class="symptom-icon">⚠️</span>Images veralten schnell und müssen regelmäßig neu erstellt werden</div>
-          <div class="symptom"><span class="symptom-icon">⚠️</span>Remote-Onboarding erfordert Geräte-Versand oder IT-Präsenz</div>
-          <div class="symptom"><span class="symptom-icon">⚠️</span>Konfigurationsfehler bei der Ersteinrichtung führen zu Folge-Tickets</div>
-          <div class="symptom"><span class="symptom-icon">⚠️</span>Kein standardisierter Prozess — jeder Admin macht es ein bisschen anders</div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span><span data-de="Jedes Gerät wird einzeln manuell konfiguriert — keine Skalierbarkeit" data-en="Every device configured individually by hand — no scalability">Jedes Gerät wird einzeln manuell konfiguriert — keine Skalierbarkeit</span></div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span><span data-de="Images veralten schnell und müssen regelmäßig neu erstellt werden" data-en="Images go stale quickly and must be recreated regularly">Images veralten schnell und müssen regelmäßig neu erstellt werden</span></div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span><span data-de="Remote-Onboarding erfordert Geräte-Versand oder IT-Präsenz" data-en="Remote onboarding requires device shipping or IT presence">Remote-Onboarding erfordert Geräte-Versand oder IT-Präsenz</span></div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span><span data-de="Konfigurationsfehler bei der Ersteinrichtung führen zu Folge-Tickets" data-en="Configuration errors during initial setup lead to follow-up tickets">Konfigurationsfehler bei der Ersteinrichtung führen zu Folge-Tickets</span></div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span><span data-de="Kein standardisierter Prozess — jeder Admin macht es ein bisschen anders" data-en="No standardised process — every admin does it slightly differently">Kein standardisierter Prozess — jeder Admin macht es ein bisschen anders</span></div>
         </div>
       </div>
     </div>
@@ -58,31 +60,31 @@
 
   <section class="detail-section alt">
     <div class="detail-section-inner">
-      <h2>Mein Ansatz</h2>
-      <p class="section-intro">Von der Autopilot-Konzeption bis zum produktiven Gerät — ein vollständig automatisierter Enrollment-Prozess.</p>
+      <h2 data-de="Mein Ansatz" data-en="My Approach">Mein Ansatz</h2>
+      <p class="section-intro" data-de="Von der Autopilot-Konzeption bis zum produktiven Gerät — ein vollständig automatisierter Enrollment-Prozess." data-en="From Autopilot design to productive device — a fully automated enrollment process.">Von der Autopilot-Konzeption bis zum produktiven Gerät — ein vollständig automatisierter Enrollment-Prozess.</p>
       <div class="steps-grid">
-        <div class="step"><div class="step-num">1</div><div class="step-body"><h4>Autopilot-Profil konfigurieren</h4><p>User-Driven (Mitarbeiter richtet selbst ein) oder Self-Deploying (Shared Device / Kiosk). Deployment-Profil mit Naming Convention, OOBE-Skip und User-Typ (Azure AD Joined).</p></div></div>
-        <div class="step"><div class="step-num">2</div><div class="step-body"><h4>Hardware Hash Import</h4><p>Prozess für Hardware-Hash-Erfassung direkt beim OEM oder via PowerShell-Script (Get-WindowsAutoPilotInfo). Import in Intune/Autopilot-Service.</p></div></div>
-        <div class="step"><div class="step-num">3</div><div class="step-body"><h4>Enrollment Status Page (ESP) konfigurieren</h4><p>ESP zeigt dem Nutzer den Fortschritt während des Enrollments. Kritische Apps blockieren die Desktop-Freigabe bis zur vollständigen Installation.</p></div></div>
-        <div class="step"><div class="step-num">4</div><div class="step-body"><h4>App-Rollout während Enrollment</h4><p>Required Apps werden während der ESP automatisch deployed. Priorität: Sicherheitssoftware, VPN-Client, Office. Timing und Reihenfolge optimieren.</p></div></div>
-        <div class="step"><div class="step-num">5</div><div class="step-body"><h4>Geräte-Naming &amp; Gruppen-Zuordnung</h4><p>Automatisches Naming nach Convention, dynamische Gruppen-Zuordnung nach Autopilot-Gruppe-Tag. Keine manuelle Nacharbeit nach Enrollment.</p></div></div>
-        <div class="step"><div class="step-num">6</div><div class="step-body"><h4>Testing &amp; Dokumentation</h4><p>End-to-End-Test mit echtem Hardware, Troubleshooting-Guide für häufige ESP-Fehler, Runbook für IT und Procurement-Team.</p></div></div>
+        <div class="step"><div class="step-num">1</div><div class="step-body"><h4 data-de="Autopilot-Profil konfigurieren" data-en="Configure Autopilot Profile">Autopilot-Profil konfigurieren</h4><p data-de="User-Driven (Mitarbeiter richtet selbst ein) oder Self-Deploying (Shared Device / Kiosk). Deployment-Profil mit Naming Convention, OOBE-Skip und User-Typ (Azure AD / Hybrid Joined)." data-en="User-driven (employee sets up themselves) or self-deploying (shared device / kiosk). Deployment profile with naming convention, OOBE skip and user type (Azure AD / Hybrid Joined).">User-Driven (Mitarbeiter richtet selbst ein) oder Self-Deploying (Shared Device / Kiosk). Deployment-Profil mit Naming Convention, OOBE-Skip und User-Typ (Azure AD / Hybrid Joined).</p></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-body"><h4 data-de="Hardware Hash Import" data-en="Hardware Hash Import">Hardware Hash Import</h4><p data-de="Prozess für Hardware-Hash-Erfassung direkt beim OEM oder via PowerShell-Script (Get-WindowsAutoPilotInfo). Import in Intune/Autopilot-Service." data-en="Process for capturing hardware hashes directly from the OEM or via PowerShell script (Get-WindowsAutoPilotInfo). Import into Intune/Autopilot service.">Prozess für Hardware-Hash-Erfassung direkt beim OEM oder via PowerShell-Script (Get-WindowsAutoPilotInfo). Import in Intune/Autopilot-Service.</p></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-body"><h4 data-de="Enrollment Status Page (ESP) konfigurieren" data-en="Configure Enrollment Status Page (ESP)">Enrollment Status Page (ESP) konfigurieren</h4><p data-de="ESP zeigt dem Nutzer den Fortschritt während des Enrollments. Kritische Apps blockieren die Desktop-Freigabe bis zur vollständigen Installation." data-en="The ESP shows the user progress during enrollment. Critical apps block desktop release until fully installed.">ESP zeigt dem Nutzer den Fortschritt während des Enrollments. Kritische Apps blockieren die Desktop-Freigabe bis zur vollständigen Installation.</p></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-body"><h4 data-de="App-Rollout während Enrollment" data-en="App Rollout during Enrollment">App-Rollout während Enrollment</h4><p data-de="Required Apps werden während der ESP automatisch deployed. Priorität: Sicherheitssoftware, VPN-Client, Office. Timing und Reihenfolge optimieren." data-en="Required apps are automatically deployed during the ESP. Priority: security software, VPN client, Office. Optimise timing and order.">Required Apps werden während der ESP automatisch deployed. Priorität: Sicherheitssoftware, VPN-Client, Office. Timing und Reihenfolge optimieren.</p></div></div>
+        <div class="step"><div class="step-num">5</div><div class="step-body"><h4 data-de="Geräte-Naming & Gruppen-Zuordnung" data-en="Device Naming & Group Assignment">Geräte-Naming &amp; Gruppen-Zuordnung</h4><p data-de="Automatisches Naming nach Convention, dynamische Gruppen-Zuordnung nach Autopilot-Gruppe-Tag. Keine manuelle Nacharbeit nach Enrollment." data-en="Automatic naming by convention, dynamic group assignment by Autopilot group tag. No manual follow-up after enrollment.">Automatisches Naming nach Convention, dynamische Gruppen-Zuordnung nach Autopilot-Gruppe-Tag. Keine manuelle Nacharbeit nach Enrollment.</p></div></div>
+        <div class="step"><div class="step-num">6</div><div class="step-body"><h4 data-de="Testing & Dokumentation" data-en="Testing & Documentation">Testing &amp; Dokumentation</h4><p data-de="End-to-End-Test mit echter Hardware, Troubleshooting-Guide für häufige ESP-Fehler, Runbook für IT und Procurement-Team." data-en="End-to-end test with real hardware, troubleshooting guide for common ESP errors, runbook for IT and procurement team.">End-to-End-Test mit echter Hardware, Troubleshooting-Guide für häufige ESP-Fehler, Runbook für IT und Procurement-Team.</p></div></div>
       </div>
     </div>
   </section>
 
   <section class="detail-section">
     <div class="detail-section-inner">
-      <h2>Was Sie erhalten</h2>
-      <p class="section-intro">Ein produktiver Zero-Touch-Prozess — Geräte direkt vom OEM an Mitarbeiter, ohne IT-Umweg.</p>
+      <h2 data-de="Was Sie erhalten" data-en="What You Get">Was Sie erhalten</h2>
+      <p class="section-intro" data-de="Ein produktiver Zero-Touch-Prozess — Geräte direkt vom OEM an Mitarbeiter, ohne IT-Umweg." data-en="A productive zero-touch process — devices shipped directly from the OEM to employees, no IT detour.">Ein produktiver Zero-Touch-Prozess — Geräte direkt vom OEM an Mitarbeiter, ohne IT-Umweg.</p>
       <div class="deliverables-grid">
-        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">🚀</div><div><h4>Autopilot-Konfiguration</h4><p>Fertig konfiguriertes Autopilot-Deployment-Profil (User-Driven oder Self-Deploying) mit ESP und Naming Convention.</p></div></div>
-        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">📋</div><div><h4>Hardware-Hash-Import-Guide</h4><p>Prozess für IT und Procurement: Wie Hardware-Hashes erfasst und in Autopilot importiert werden — auch für OEM-Direktlieferungen.</p></div></div>
-        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">⚙️</div><div><h4>Optimierte ESP-Konfiguration</h4><p>ESP mit korrekten App-Timeouts, klarer Nutzer-Kommunikation und Fehlerbehandlung. Enrollment dauert typisch 20–40 Minuten.</p></div></div>
-        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">📖</div><div><h4>IT-Runbook &amp; Troubleshooting-Guide</h4><p>Dokumentierter Prozess für neue Geräte, häufige Fehler und deren Lösung, Eskalationspfade.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">🚀</div><div><h4 data-de="Autopilot-Konfiguration" data-en="Autopilot Configuration">Autopilot-Konfiguration</h4><p data-de="Fertig konfiguriertes Autopilot-Deployment-Profil (User-Driven oder Self-Deploying) mit ESP und Naming Convention." data-en="Fully configured Autopilot deployment profile (user-driven or self-deploying) with ESP and naming convention.">Fertig konfiguriertes Autopilot-Deployment-Profil (User-Driven oder Self-Deploying) mit ESP und Naming Convention.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">📋</div><div><h4 data-de="Hardware-Hash-Import-Guide" data-en="Hardware Hash Import Guide">Hardware-Hash-Import-Guide</h4><p data-de="Prozess für IT und Procurement: Wie Hardware-Hashes erfasst und in Autopilot importiert werden — auch für OEM-Direktlieferungen." data-en="Process for IT and procurement: how hardware hashes are captured and imported into Autopilot — including OEM direct deliveries.">Prozess für IT und Procurement: Wie Hardware-Hashes erfasst und in Autopilot importiert werden — auch für OEM-Direktlieferungen.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">⚙️</div><div><h4 data-de="Optimierte ESP-Konfiguration" data-en="Optimised ESP Configuration">Optimierte ESP-Konfiguration</h4><p data-de="ESP mit korrekten App-Timeouts, klarer Nutzer-Kommunikation und Fehlerbehandlung. Enrollment dauert typisch 20–40 Minuten." data-en="ESP with correct app timeouts, clear user communication and error handling. Enrollment typically takes 20–40 minutes.">ESP mit korrekten App-Timeouts, klarer Nutzer-Kommunikation und Fehlerbehandlung. Enrollment dauert typisch 20–40 Minuten.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">📖</div><div><h4 data-de="IT-Runbook & Troubleshooting-Guide" data-en="IT Runbook & Troubleshooting Guide">IT-Runbook &amp; Troubleshooting-Guide</h4><p data-de="Dokumentierter Prozess für neue Geräte, häufige Fehler und deren Lösung, Eskalationspfade." data-en="Documented process for new devices, common errors and their solutions, escalation paths.">Dokumentierter Prozess für neue Geräte, häufige Fehler und deren Lösung, Eskalationspfade.</p></div></div>
       </div>
       <div class="detail-tech">
-        <div class="detail-tech-label">Eingesetzte Technologien</div>
+        <div class="detail-tech-label" data-de="Eingesetzte Technologien" data-en="Technologies used">Eingesetzte Technologien</div>
         <div class="tg"><span class="tt c">Windows Autopilot</span><span class="tt c">Microsoft Intune</span><span class="tt c">Entra ID</span><span class="tt">ESP</span><span class="tt">Hardware Hash</span><span class="tt">PowerShell</span><span class="tt">OOBE</span></div>
       </div>
     </div>
@@ -90,14 +92,14 @@
 
   <section class="detail-cta">
     <div class="detail-cta-inner">
-      <h2>Zero-Touch einführen</h2>
-      <p>Zeigen Sie mir Ihren aktuellen Onboarding-Prozess — ich zeige Ihnen, wie der gleiche Ablauf in 30 Minuten statt 4 Stunden geht.</p>
+      <h2 data-de="Zero-Touch einführen" data-en="Implement Zero-Touch">Zero-Touch einführen</h2>
+      <p data-de="Zeigen Sie mir Ihren aktuellen Onboarding-Prozess — ich zeige Ihnen, wie der gleiche Ablauf in 30 Minuten statt 4 Stunden geht." data-en="Show me your current onboarding process — I'll show you how the same flow takes 30 minutes instead of 4 hours.">Zeigen Sie mir Ihren aktuellen Onboarding-Prozess — ich zeige Ihnen, wie der gleiche Ablauf in 30 Minuten statt 4 Stunden geht.</p>
       <div class="detail-cta-btns">
-        <a href="mailto:t.aydin6195@gmail.com" class="btn bp">
+        <a href="mailto:hello@aydin.consulting" class="btn bp">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          Jetzt anfragen
+          <span data-de="Jetzt anfragen" data-en="Get in touch">Jetzt anfragen</span>
         </a>
-        <a href="index.html#pain" class="btn bo">Weitere Pain Points</a>
+        <a href="index.html#pain" class="btn bo" data-de="Weitere Pain Points" data-en="More Pain Points">Weitere Pain Points</a>
       </div>
     </div>
   </section>

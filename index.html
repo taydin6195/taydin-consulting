@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" id="html-root">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://aydin.consulting/">
 
-  <!-- ── Open Graph (LinkedIn, WhatsApp, etc.) ────── -->
+  <!-- ── Open Graph ────────────────────────────────── -->
   <meta property="og:type"        content="website">
   <meta property="og:url"         content="https://aydin.consulting/">
   <meta property="og:title"       content="Tunahan Aydin — Intune &amp; M365 Consultant | aydin.consulting">
@@ -24,7 +24,7 @@
   <meta name="twitter:title"       content="Tunahan Aydin — Intune &amp; M365 Consultant | aydin.consulting">
   <meta name="twitter:description" content="Strukturiertes Intune, automatisierte Deployments und Endpoint Security für Enterprise-Kunden.">
 
-  <!-- ── Schema.org: Person + FreelanceConsultant ── -->
+  <!-- ── Schema.org ───────────────────────────────── -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -45,6 +45,9 @@
   }
   </script>
 
+  <!-- ── No-flash language init ───────────────────── -->
+  <script>(function(){var l=localStorage.getItem('lang')||'de';document.documentElement.lang=l;document.documentElement.dataset.lang=l;})();</script>
+
   <!-- ── Fonts ─────────────────────────────────────── -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,10 +67,12 @@
   <ul class="nk" id="nav-menu" role="list">
     <li><a href="#pain">Pain Points</a></li>
     <li><a href="#intune">Intune Deep Dive</a></li>
-    <li><a href="#projects">Projekte</a></li>
-    <li><a href="#exp">Werdegang</a></li>
-    <li><a href="#contact" class="nc">Kontakt</a></li>
+    <li><a href="#projects" data-de="Projekte" data-en="Projects">Projekte</a></li>
+    <li><a href="#exp" data-de="Werdegang" data-en="Experience">Werdegang</a></li>
+    <li><a href="#contact" class="nc" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
   </ul>
+
+  <button class="lang-toggle" id="lang-toggle" aria-label="Switch to English">EN</button>
 
   <button class="nav-toggle" id="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Menü öffnen">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -89,11 +94,16 @@
   <div class="hero-split">
     <!-- Left: copy -->
     <div class="hc">
-      <div class="hbadge" role="status">Verfügbar für neue Projekte</div>
+      <div class="hbadge" role="status"
+           data-de="Verfügbar für neue Projekte"
+           data-en="Available for new projects">Verfügbar für neue Projekte</div>
 
-      <h1>Ihr <span class="acc">Microsoft Intune</span> &amp;<br>Endpoint Consultant</h1>
+      <h1 data-de-html="Ihr <span class='acc'>Microsoft Intune</span> &amp;<br>Endpoint Consultant"
+          data-en-html="Your <span class='acc'>Microsoft Intune</span> &amp;<br>Endpoint Consultant">Ihr <span class="acc">Microsoft Intune</span> &amp;<br>Endpoint Consultant</h1>
 
-      <p class="hsub">
+      <p class="hsub"
+         data-de="Ich helfe Unternehmen, ihre Gerätelandschaft unter Kontrolle zu bringen — mit sauber strukturiertem Intune, automatisierten Deployments und einer Security-Architektur, die auch nach dem Projekt hält."
+         data-en="I help enterprises take control of their device landscape — with well-structured Intune, automated deployments, and security architecture that holds up long after the project ends.">
         Ich helfe Unternehmen, ihre Gerätelandschaft unter Kontrolle zu bringen —
         mit sauber strukturiertem Intune, automatisierten Deployments und einer
         Security-Architektur, die auch nach dem Projekt hält.
@@ -105,16 +115,18 @@
             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
             <polyline points="22,6 12,13 2,6"/>
           </svg>
-          Projekt anfragen
+          <span data-de="Projekt anfragen" data-en="Request a project">Projekt anfragen</span>
         </a>
-        <a href="#pain" class="btn bo">Typische Pain Points ↓</a>
+        <a href="#pain" class="btn bo"
+           data-de="Typische Pain Points ↓"
+           data-en="Common Pain Points ↓">Typische Pain Points ↓</a>
       </div>
 
       <div class="hstats" aria-label="Kennzahlen">
-        <div><div class="sn">6+</div><div class="sl">Jahre Intune-Erfahrung</div></div>
-        <div><div class="sn">800+</div><div class="sl">Migrierte Geräte</div></div>
-        <div><div class="sn">4</div><div class="sl">Länder parallel betreut</div></div>
-        <div><div class="sn">3</div><div class="sl">Microsoft-Zertifikate</div></div>
+        <div><div class="sn">6+</div><div class="sl" data-de="Jahre Intune-Erfahrung" data-en="Years Intune experience">Jahre Intune-Erfahrung</div></div>
+        <div><div class="sn">3.000+</div><div class="sl" data-de="Endgeräte deployed" data-en="Devices deployed">Endgeräte deployed</div></div>
+        <div><div class="sn">4</div><div class="sl" data-de="Länder parallel betreut" data-en="Countries managed in parallel">Länder parallel betreut</div></div>
+        <div><div class="sn">3</div><div class="sl" data-de="Microsoft-Zertifikate" data-en="Microsoft certifications">Microsoft-Zertifikate</div></div>
       </div>
     </div>
 
@@ -223,15 +235,12 @@
         </line>
 
         <!-- ── Animated flow lines from Intune down ── -->
-        <!-- to Windows laptop -->
         <line x1="170" y1="200" x2="145" y2="272" stroke="#0F766E" stroke-width="1.2" stroke-dasharray="4 3" opacity=".35">
           <animate attributeName="stroke-dashoffset" values="7;0" dur="1.6s" repeatCount="indefinite"/>
         </line>
-        <!-- to Mobile -->
         <line x1="261" y1="200" x2="261" y2="272" stroke="#0F766E" stroke-width="1.2" stroke-dasharray="4 3" opacity=".35">
           <animate attributeName="stroke-dashoffset" values="7;0" dur="1.4s" repeatCount="indefinite"/>
         </line>
-        <!-- to macOS -->
         <line x1="350" y1="200" x2="375" y2="272" stroke="#0F766E" stroke-width="1.2" stroke-dasharray="4 3" opacity=".35">
           <animate attributeName="stroke-dashoffset" values="7;0" dur="1.8s" repeatCount="indefinite"/>
         </line>
@@ -245,14 +254,11 @@
         <g filter="url(#fShadow)">
           <rect x="95" y="272" width="100" height="68" rx="7" fill="#FFF" stroke="#E5E7EB" stroke-width="1"/>
           <rect x="103" y="279" width="84" height="48" rx="4" fill="#F0FDFA"/>
-          <!-- screen lines -->
           <rect x="112" y="287" width="56" height="4" rx="2" fill="#0F766E" opacity=".18"/>
           <rect x="112" y="295" width="40" height="4" rx="2" fill="#0F766E" opacity=".11"/>
           <rect x="112" y="303" width="48" height="4" rx="2" fill="#0F766E" opacity=".07"/>
-          <!-- check badge -->
           <circle cx="158" cy="315" r="8" fill="#D1FAE5"/>
           <path d="M154 315l3 3 6-6" stroke="#059669" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          <!-- laptop base -->
           <path d="M88 340 l8 6 h106 l8-6" fill="#E5E7EB" stroke="#D1D5DB" stroke-width="1"/>
         </g>
         <text x="145" y="362" text-anchor="middle" font-family="DM Mono,monospace" font-size="8.5" font-weight="500" fill="#5A5A5A">Windows 11</text>
@@ -366,9 +372,9 @@
 ════════════════════════════════════════════════ -->
 <section id="pain">
   <div class="a">
-    <div class="slab">Ihre Herausforderungen</div>
-    <h2 class="stit">Kommt Ihnen das bekannt vor?</h2>
-    <p class="ssub">Die häufigsten Probleme, die ich bei Kunden löse — und wie.</p>
+    <div class="slab" data-de="Ihre Herausforderungen" data-en="Your Challenges">Ihre Herausforderungen</div>
+    <h2 class="stit" data-de="Kommt Ihnen das bekannt vor?" data-en="Does this sound familiar?">Kommt Ihnen das bekannt vor?</h2>
+    <p class="ssub" data-de="Die häufigsten Probleme, die ich bei Kunden löse — und wie." data-en="The most common problems I solve for clients — and how.">Die häufigsten Probleme, die ich bei Kunden löse — und wie.</p>
   </div>
 
   <div class="pain-grid">
@@ -378,9 +384,9 @@
         <div class="pain-arrow" aria-hidden="true">→</div>
       </div>
       <div class="pain-label">Problem</div>
-      <h3>„Unser Intune-Tenant ist ein Wildwuchs"</h3>
-      <p>Doppelte Profile, veraltete Policies, keine klare Gruppenstruktur. Niemand weiß, welche Richtlinien auf welchen Geräten greifen.</p>
-      <div class="pain-solution">✓ Intune-Restrukturierung mit RBAC, Scope Tags &amp; dynamischen Gruppen</div>
+      <h3 data-de="„Unser Intune-Tenant ist ein Wildwuchs"" data-en="„Our Intune tenant is a complete mess"">„Unser Intune-Tenant ist ein Wildwuchs"</h3>
+      <p data-de="Doppelte Profile, veraltete Policies, keine klare Gruppenstruktur. Niemand weiß, welche Richtlinien auf welchen Geräten greifen." data-en="Duplicate profiles, outdated policies, no clear group structure. Nobody knows which policies apply to which devices.">Doppelte Profile, veraltete Policies, keine klare Gruppenstruktur. Niemand weiß, welche Richtlinien auf welchen Geräten greifen.</p>
+      <div class="pain-solution" data-de="✓ Intune-Restrukturierung mit RBAC, Scope Tags & dynamischen Gruppen" data-en="✓ Intune restructuring with RBAC, scope tags & dynamic groups">✓ Intune-Restrukturierung mit RBAC, Scope Tags &amp; dynamischen Gruppen</div>
     </a>
 
     <a href="pain-rollouts.html" class="pain-card a">
@@ -389,9 +395,9 @@
         <div class="pain-arrow" aria-hidden="true">→</div>
       </div>
       <div class="pain-label">Problem</div>
-      <h3>„Software-Rollouts sind manuell und fehleranfällig"</h3>
-      <p>Apps werden per Hand paketiert, Silent Installs funktionieren nicht, Fachabteilungen warten wochenlang. Kein standardisierter Paketierungsprozess.</p>
-      <div class="pain-solution">✓ Automatisierte App-Paketierung &amp; Deployment über Intune Pipeline</div>
+      <h3 data-de="„Software-Rollouts sind manuell und fehleranfällig"" data-en="„Software rollouts are manual and error-prone"">„Software-Rollouts sind manuell und fehleranfällig"</h3>
+      <p data-de="Apps werden per Hand paketiert, Silent Installs funktionieren nicht, Fachabteilungen warten wochenlang. Kein standardisierter Paketierungsprozess." data-en="Apps are packaged manually, silent installs fail, departments wait for weeks. No standardised packaging process.">Apps werden per Hand paketiert, Silent Installs funktionieren nicht, Fachabteilungen warten wochenlang. Kein standardisierter Paketierungsprozess.</p>
+      <div class="pain-solution" data-de="✓ Automatisierte App-Paketierung & Deployment über Intune Pipeline" data-en="✓ Automated app packaging & deployment via Intune pipeline">✓ Automatisierte App-Paketierung &amp; Deployment über Intune Pipeline</div>
     </a>
 
     <a href="pain-compliance.html" class="pain-card a">
@@ -400,9 +406,9 @@
         <div class="pain-arrow" aria-hidden="true">→</div>
       </div>
       <div class="pain-label">Problem</div>
-      <h3>„Sind unsere Geräte wirklich compliant?"</h3>
-      <p>Conditional Access halb eingerichtet, Defender läuft nicht überall, Compliance Policies greifen nicht. Im Audit wird es kritisch.</p>
-      <div class="pain-solution">✓ Layered Compliance Framework mit Defender, CA &amp; Security Baselines</div>
+      <h3 data-de="„Sind unsere Geräte wirklich compliant?"" data-en="„Are our devices actually compliant?"">„Sind unsere Geräte wirklich compliant?"</h3>
+      <p data-de="Conditional Access halb eingerichtet, Defender läuft nicht überall, Compliance Policies greifen nicht. Im Audit wird es kritisch." data-en="Conditional Access half-configured, Defender not running everywhere, compliance policies not enforced. It will show in an audit.">Conditional Access halb eingerichtet, Defender läuft nicht überall, Compliance Policies greifen nicht. Im Audit wird es kritisch.</p>
+      <div class="pain-solution" data-de="✓ Layered Compliance Framework mit Defender, CA & Security Baselines" data-en="✓ Layered compliance framework with Defender, CA & security baselines">✓ Layered Compliance Framework mit Defender, CA &amp; Security Baselines</div>
     </a>
 
     <a href="pain-onboarding.html" class="pain-card a">
@@ -411,9 +417,9 @@
         <div class="pain-arrow" aria-hidden="true">→</div>
       </div>
       <div class="pain-label">Problem</div>
-      <h3>„Neue Geräte brauchen Tage statt Minuten"</h3>
-      <p>Jedes Gerät wird manuell eingerichtet, Images veraltet, IT verbringt Stunden mit Ersteinrichtung. Onboarding dauert viel zu lang.</p>
-      <div class="pain-solution">✓ Autopilot &amp; Zero-Touch — Gerät auspacken, einschalten, fertig</div>
+      <h3 data-de="„Neue Geräte brauchen Tage statt Minuten"" data-en="„New devices take days instead of minutes"">„Neue Geräte brauchen Tage statt Minuten"</h3>
+      <p data-de="Jedes Gerät wird manuell eingerichtet, Images veraltet, IT verbringt Stunden mit Ersteinrichtung. Onboarding dauert viel zu lang." data-en="Every device is configured manually, images are outdated, IT spends hours on first setup. Onboarding takes far too long.">Jedes Gerät wird manuell eingerichtet, Images veraltet, IT verbringt Stunden mit Ersteinrichtung. Onboarding dauert viel zu lang.</p>
+      <div class="pain-solution" data-de="✓ Autopilot & Zero-Touch — Gerät auspacken, einschalten, fertig" data-en="✓ Autopilot & zero-touch — unbox, power on, done">✓ Autopilot &amp; Zero-Touch — Gerät auspacken, einschalten, fertig</div>
     </a>
 
     <a href="pain-crossplatform.html" class="pain-card a">
@@ -422,9 +428,9 @@
         <div class="pain-arrow" aria-hidden="true">→</div>
       </div>
       <div class="pain-label">Problem</div>
-      <h3>„Mac- und iOS-Geräte laufen außerhalb von Intune"</h3>
-      <p>macOS wird stiefmütterlich behandelt, Apple-Geräte noch über JAMF oder gar nicht über MDM. Kein einheitliches Management.</p>
-      <div class="pain-solution">✓ Cross-Platform: Windows, macOS &amp; iOS unter einem Dach in Intune</div>
+      <h3 data-de="„Mac- und iOS-Geräte laufen außerhalb von Intune"" data-en="„Mac and iOS devices run outside Intune"">„Mac- und iOS-Geräte laufen außerhalb von Intune"</h3>
+      <p data-de="macOS wird stiefmütterlich behandelt, Apple-Geräte noch über JAMF oder gar nicht über MDM. Kein einheitliches Management." data-en="macOS is an afterthought, Apple devices still managed via JAMF or not at all. No unified management.">macOS wird stiefmütterlich behandelt, Apple-Geräte noch über JAMF oder gar nicht über MDM. Kein einheitliches Management.</p>
+      <div class="pain-solution" data-de="✓ Cross-Platform: Windows, macOS & iOS unter einem Dach in Intune" data-en="✓ Cross-platform: Windows, macOS & iOS unified in Intune">✓ Cross-Platform: Windows, macOS &amp; iOS unter einem Dach in Intune</div>
     </a>
 
     <a href="pain-iac.html" class="pain-card a">
@@ -433,9 +439,9 @@
         <div class="pain-arrow" aria-hidden="true">→</div>
       </div>
       <div class="pain-label">Problem</div>
-      <h3>„Wir wollen Intune-Konfiguration als Code versionieren"</h3>
-      <p>Änderungen am Tenant nicht nachvollziehbar, kein Rollback möglich, keine Staging-Umgebung. Terraform für Intune fehlt intern.</p>
-      <div class="pain-solution">✓ Infrastructure-as-Code für Intune mit Terraform &amp; Graph API</div>
+      <h3 data-de="„Wir wollen Intune-Konfiguration als Code versionieren"" data-en="„We want to version Intune config as code"">„Wir wollen Intune-Konfiguration als Code versionieren"</h3>
+      <p data-de="Änderungen am Tenant nicht nachvollziehbar, kein Rollback möglich, keine Staging-Umgebung. Terraform für Intune fehlt intern." data-en="Tenant changes untraceable, no rollback, no staging environment. Terraform expertise for Intune not available in-house.">Änderungen am Tenant nicht nachvollziehbar, kein Rollback möglich, keine Staging-Umgebung. Terraform für Intune fehlt intern.</p>
+      <div class="pain-solution" data-de="✓ Infrastructure-as-Code für Intune mit Terraform & Graph API" data-en="✓ Infrastructure-as-code for Intune with Terraform & Graph API">✓ Infrastructure-as-Code für Intune mit Terraform &amp; Graph API</div>
     </a>
   </div>
 </section>
@@ -446,45 +452,45 @@
 ════════════════════════════════════════════════ -->
 <section id="services">
   <div class="a">
-    <div class="slab">Leistungen</div>
-    <h2 class="stit">Was ich konkret liefere</h2>
+    <div class="slab" data-de="Leistungen" data-en="Services">Leistungen</div>
+    <h2 class="stit" data-de="Was ich konkret liefere" data-en="What I deliver">Was ich konkret liefere</h2>
   </div>
 
   <div class="srv-grid">
     <article class="srv a">
       <div class="srv-ic" style="background:var(--accent-light)" aria-hidden="true">🛡️</div>
-      <h3>Intune-Architektur &amp; Tenant-Design</h3>
-      <p>Strukturierter Aufbau oder Neuausrichtung: RBAC-Modell, Scope Tags, dynamische Gruppen, Naming Conventions, Baseline-Policies. Für 50 bis 5.000+ Geräte.</p>
+      <h3 data-de="Intune-Architektur & Tenant-Design" data-en="Intune Architecture & Tenant Design">Intune-Architektur &amp; Tenant-Design</h3>
+      <p data-de="Strukturierter Aufbau oder Neuausrichtung: RBAC-Modell, Scope Tags, dynamische Gruppen, Naming Conventions, Baseline-Policies. Für 50 bis 5.000+ Geräte." data-en="Structured setup or realignment: RBAC model, scope tags, dynamic groups, naming conventions, baseline policies. For 50 to 5,000+ devices.">Strukturierter Aufbau oder Neuausrichtung: RBAC-Modell, Scope Tags, dynamische Gruppen, Naming Conventions, Baseline-Policies. Für 50 bis 5.000+ Geräte.</p>
     </article>
 
     <article class="srv a">
       <div class="srv-ic" style="background:var(--orange-light)" aria-hidden="true">📦</div>
-      <h3>App-Paketierung &amp; Deployment</h3>
-      <p>Win32-Apps, MSI/MSIX mit PowerShell App Deploy Toolkit. Silent Installs, Pre-/Post-Scripts, Detection Rules. Automatisierte Rollout-Pipelines.</p>
+      <h3 data-de="App-Paketierung & Deployment" data-en="App Packaging & Deployment">App-Paketierung &amp; Deployment</h3>
+      <p data-de="Win32-Apps, MSI/MSIX mit PowerShell App Deploy Toolkit. Silent Installs, Pre-/Post-Scripts, Detection Rules. Automatisierte Rollout-Pipelines." data-en="Win32 apps, MSI/MSIX with PowerShell App Deploy Toolkit. Silent installs, pre-/post-scripts, detection rules. Automated rollout pipelines.">Win32-Apps, MSI/MSIX mit PowerShell App Deploy Toolkit. Silent Installs, Pre-/Post-Scripts, Detection Rules. Automatisierte Rollout-Pipelines.</p>
     </article>
 
     <article class="srv a">
       <div class="srv-ic" style="background:var(--blue-light)" aria-hidden="true">🔄</div>
-      <h3>Migrationen</h3>
-      <p>Tenant-to-Tenant, JAMF → Intune, G Suite → Intune, Hybrid → Cloud-Only. Exchange, SharePoint, Intune parallel.</p>
+      <h3 data-de="Migrationen" data-en="Migrations">Migrationen</h3>
+      <p data-de="Tenant-to-Tenant, JAMF → Intune, Fileserver → SharePoint Online, Hybrid → Cloud-Only. Exchange, SharePoint und Intune parallel." data-en="Tenant-to-tenant, JAMF → Intune, fileserver → SharePoint Online, hybrid → cloud-only. Exchange, SharePoint and Intune in parallel.">Tenant-to-Tenant, JAMF → Intune, Fileserver → SharePoint Online, Hybrid → Cloud-Only. Exchange, SharePoint und Intune parallel.</p>
     </article>
 
     <article class="srv a">
       <div class="srv-ic" style="background:var(--green-light)" aria-hidden="true">🚀</div>
-      <h3>Autopilot &amp; Zero-Touch</h3>
-      <p>Windows Autopilot, Apple Business Manager, Enrollment-Profile. Geräte kommen vorkonfiguriert beim Mitarbeiter an.</p>
+      <h3 data-de="Autopilot & Zero-Touch" data-en="Autopilot & Zero-Touch">Autopilot &amp; Zero-Touch</h3>
+      <p data-de="Windows Autopilot (Hybrid & Cloud-Only), Apple Business Manager, Enrollment-Profile. Geräte kommen vorkonfiguriert beim Mitarbeiter an." data-en="Windows Autopilot (hybrid & cloud-only), Apple Business Manager, enrollment profiles. Devices arrive preconfigured at the employee's desk.">Windows Autopilot (Hybrid &amp; Cloud-Only), Apple Business Manager, Enrollment-Profile. Geräte kommen vorkonfiguriert beim Mitarbeiter an.</p>
     </article>
 
     <article class="srv a">
       <div class="srv-ic" style="background:var(--red-light)" aria-hidden="true">🔐</div>
-      <h3>Endpoint Security &amp; Compliance</h3>
-      <p>Defender for Endpoint, Conditional Access, MFA, Compliance Policies, Security Baselines. Tenant-Härtung nach Zero-Trust.</p>
+      <h3 data-de="Endpoint Security & Compliance" data-en="Endpoint Security & Compliance">Endpoint Security &amp; Compliance</h3>
+      <p data-de="Defender for Endpoint, Conditional Access, MFA, Compliance Policies, Security Baselines. Tenant-Härtung nach Zero-Trust." data-en="Defender for Endpoint, Conditional Access, MFA, compliance policies, security baselines. Tenant hardening following Zero Trust principles.">Defender for Endpoint, Conditional Access, MFA, Compliance Policies, Security Baselines. Tenant-Härtung nach Zero-Trust.</p>
     </article>
 
     <article class="srv a">
       <div class="srv-ic" style="background:var(--accent-light)" aria-hidden="true">⚡</div>
-      <h3>Automatisierung &amp; Reporting</h3>
-      <p>Power Automate, PowerShell, Python. Enrollment-Monitoring, Compliance-Reports, Ticket-Handling. IaC mit Terraform.</p>
+      <h3 data-de="Automatisierung & Reporting" data-en="Automation & Reporting">Automatisierung &amp; Reporting</h3>
+      <p data-de="Power Automate, PowerShell, Python. Enrollment-Monitoring, Compliance-Reports, Ticket-Handling. IaC mit Terraform für Windows 365 & Intune." data-en="Power Automate, PowerShell, Python. Enrollment monitoring, compliance reports, ticket handling. IaC with Terraform for Windows 365 & Intune.">Power Automate, PowerShell, Python. Enrollment-Monitoring, Compliance-Reports, Ticket-Handling. IaC mit Terraform für Windows 365 &amp; Intune.</p>
     </article>
   </div>
 </section>
@@ -496,46 +502,102 @@
 <section id="intune">
   <div class="a">
     <div class="slab">Intune Deep Dive</div>
-    <h2 class="stit">Mein Intune-Werkzeugkasten</h2>
-    <p class="ssub">Klicken Sie auf einen Bereich für Details.</p>
+    <h2 class="stit" data-de="Mein Intune-Werkzeugkasten" data-en="My Intune Toolbox">Mein Intune-Werkzeugkasten</h2>
+    <p class="ssub" data-de="Klicken Sie auf einen Bereich für Details." data-en="Click on an area for details.">Klicken Sie auf einen Bereich für Details.</p>
   </div>
 
   <div class="intune-wrap">
     <div class="intune-list a">
       <div class="il-item active" onclick="toggleItem(this)">
-        <div class="il-head"><h4>🏗️ Tenant-Strukturierung</h4><span class="il-chevron" aria-hidden="true">▼</span></div>
-        <div class="il-body"><p>Saubere Grundarchitektur mit RBAC-Rollenmodell, Scope Tags für Multi-Team-Verwaltung, dynamischen Gruppen nach Gerätetyp/Abteilung/OS, und klaren Naming Conventions.</p><div class="il-tags"><span>RBAC</span><span>Scope Tags</span><span>Dynamic Groups</span><span>Entra ID</span></div></div>
+        <div class="il-head">
+          <h4 data-de="🏗️ Tenant-Strukturierung" data-en="🏗️ Tenant Architecture">🏗️ Tenant-Strukturierung</h4>
+          <span class="il-chevron" aria-hidden="true">▼</span>
+        </div>
+        <div class="il-body">
+          <p data-de="Saubere Grundarchitektur mit RBAC-Rollenmodell, Scope Tags für Multi-Team-Verwaltung, dynamischen Gruppen nach Gerätetyp/Abteilung/OS und klaren Naming Conventions. Basis für jeden skalierbaren Intune-Tenant." data-en="Clean foundation with RBAC role model, scope tags for multi-team management, dynamic groups by device type/department/OS, and clear naming conventions. The basis for every scalable Intune tenant.">Saubere Grundarchitektur mit RBAC-Rollenmodell, Scope Tags für Multi-Team-Verwaltung, dynamischen Gruppen nach Gerätetyp/Abteilung/OS und klaren Naming Conventions. Basis für jeden skalierbaren Intune-Tenant.</p>
+          <div class="il-tags"><span>RBAC</span><span>Scope Tags</span><span>Dynamic Groups</span><span>Entra ID</span></div>
+        </div>
       </div>
       <div class="il-item" onclick="toggleItem(this)">
-        <div class="il-head"><h4>📦 App Packaging &amp; Deployment</h4><span class="il-chevron" aria-hidden="true">▼</span></div>
-        <div class="il-body"><p>Win32-App-Erstellung mit IntuneWinAppUtil, PowerShell App Deploy Toolkit, MSI/MSIX-Wrapping, Detection Rules (Registry, File, Script), Dependency &amp; Supersedence Chains.</p><div class="il-tags"><span>Win32 Apps</span><span>PSADT</span><span>MSIX</span><span>Detection Rules</span><span>Supersedence</span></div></div>
+        <div class="il-head">
+          <h4>📦 App Packaging &amp; Deployment</h4>
+          <span class="il-chevron" aria-hidden="true">▼</span>
+        </div>
+        <div class="il-body">
+          <p data-de="Win32-App-Erstellung mit IntuneWinAppUtil, PowerShell App Deploy Toolkit, MSI/MSIX-Wrapping, Detection Rules (Registry, File, Script), Dependency & Supersedence Chains." data-en="Win32 app creation using IntuneWinAppUtil, PowerShell App Deploy Toolkit, MSI/MSIX wrapping, detection rules (registry, file, script), dependency & supersedence chains.">Win32-App-Erstellung mit IntuneWinAppUtil, PowerShell App Deploy Toolkit, MSI/MSIX-Wrapping, Detection Rules (Registry, File, Script), Dependency &amp; Supersedence Chains.</p>
+          <div class="il-tags"><span>Win32 Apps</span><span>PSADT</span><span>MSIX</span><span>Detection Rules</span><span>Supersedence</span></div>
+        </div>
       </div>
       <div class="il-item" onclick="toggleItem(this)">
-        <div class="il-head"><h4>🚀 Autopilot &amp; Zero-Touch</h4><span class="il-chevron" aria-hidden="true">▼</span></div>
-        <div class="il-body"><p>Windows Autopilot (User-Driven &amp; Self-Deploying), Apple Business Manager mit ADE, Enrollment-Profile für iOS/macOS. Hardware-Hash-Import, ESP-Konfiguration.</p><div class="il-tags"><span>Autopilot</span><span>ABM</span><span>ADE</span><span>ESP</span><span>Hardware Hash</span></div></div>
+        <div class="il-head">
+          <h4 data-de="🚀 Autopilot & Zero-Touch" data-en="🚀 Autopilot & Zero-Touch">🚀 Autopilot &amp; Zero-Touch</h4>
+          <span class="il-chevron" aria-hidden="true">▼</span>
+        </div>
+        <div class="il-body">
+          <p data-de="Windows Autopilot (User-Driven & Self-Deploying, Hybrid Azure AD Join), Apple Business Manager mit ADE, Enrollment-Profile für iOS/macOS. Hardware-Hash-Import, ESP-Konfiguration. Rollout für 3.000+ Endgeräte." data-en="Windows Autopilot (user-driven & self-deploying, Hybrid Azure AD Join), Apple Business Manager with ADE, enrollment profiles for iOS/macOS. Hardware hash import, ESP configuration. Deployed for 3,000+ devices.">Windows Autopilot (User-Driven &amp; Self-Deploying, Hybrid Azure AD Join), Apple Business Manager mit ADE, Enrollment-Profile für iOS/macOS. Hardware-Hash-Import, ESP-Konfiguration. Rollout für 3.000+ Endgeräte.</p>
+          <div class="il-tags"><span>Autopilot</span><span>ABM</span><span>ADE</span><span>ESP</span><span>Hybrid Azure AD</span></div>
+        </div>
       </div>
       <div class="il-item" onclick="toggleItem(this)">
-        <div class="il-head"><h4>🔐 Compliance &amp; Security</h4><span class="il-chevron" aria-hidden="true">▼</span></div>
-        <div class="il-body"><p>Layered Compliance Policies (Basis → Erweitert → Strict), Conditional Access, Defender for Endpoint, Windows Update for Business Rings, Security Baselines nach CIS/Microsoft.</p><div class="il-tags"><span>Compliance</span><span>Conditional Access</span><span>Defender</span><span>WUfB</span><span>CIS Baselines</span></div></div>
+        <div class="il-head">
+          <h4 data-de="🔐 Compliance & Security" data-en="🔐 Compliance & Security">🔐 Compliance &amp; Security</h4>
+          <span class="il-chevron" aria-hidden="true">▼</span>
+        </div>
+        <div class="il-body">
+          <p data-de="Layered Compliance Policies (Basis → Erweitert → Strict), Conditional Access, Defender for Endpoint mit MDE-Connector, Windows Update for Business Rings, Security Baselines nach CIS/Microsoft." data-en="Layered compliance policies (Basic → Extended → Strict), Conditional Access, Defender for Endpoint with MDE connector, Windows Update for Business rings, security baselines following CIS/Microsoft standards.">Layered Compliance Policies (Basis → Erweitert → Strict), Conditional Access, Defender for Endpoint mit MDE-Connector, Windows Update for Business Rings, Security Baselines nach CIS/Microsoft.</p>
+          <div class="il-tags"><span>Compliance</span><span>Conditional Access</span><span>Defender</span><span>WUfB</span><span>CIS Baselines</span></div>
+        </div>
       </div>
       <div class="il-item" onclick="toggleItem(this)">
-        <div class="il-head"><h4>🍎 Cross-Platform (macOS, iOS)</h4><span class="il-chevron" aria-hidden="true">▼</span></div>
-        <div class="il-body"><p>macOS-Management mit Custom Profiles, Shell Scripts und Platform SSO. iOS über ADE/ABM, Per-App VPN. Migration von JAMF oder anderen MDMs zu Intune ohne Downtime.</p><div class="il-tags"><span>macOS</span><span>iOS</span><span>Shell Scripts</span><span>Platform SSO</span><span>JAMF Migration</span></div></div>
+        <div class="il-head">
+          <h4 data-de="🍎 Cross-Platform (macOS, iOS)" data-en="🍎 Cross-Platform (macOS, iOS)">🍎 Cross-Platform (macOS, iOS)</h4>
+          <span class="il-chevron" aria-hidden="true">▼</span>
+        </div>
+        <div class="il-body">
+          <p data-de="macOS-Management mit Custom Profiles, Shell Scripts und Platform SSO. iOS über ADE/ABM, Per-App VPN. Migration von JAMF oder anderen MDMs zu Intune ohne Downtime — 800+ Geräte migriert." data-en="macOS management with custom profiles, shell scripts, and Platform SSO. iOS via ADE/ABM, per-app VPN. JAMF and other MDM migrations to Intune with zero downtime — 800+ devices migrated.">macOS-Management mit Custom Profiles, Shell Scripts und Platform SSO. iOS über ADE/ABM, Per-App VPN. Migration von JAMF oder anderen MDMs zu Intune ohne Downtime — 800+ Geräte migriert.</p>
+          <div class="il-tags"><span>macOS</span><span>iOS</span><span>Shell Scripts</span><span>Platform SSO</span><span>JAMF Migration</span></div>
+        </div>
       </div>
       <div class="il-item" onclick="toggleItem(this)">
-        <div class="il-head"><h4>⚡ Terraform &amp; IaC für Intune</h4><span class="il-chevron" aria-hidden="true">▼</span></div>
-        <div class="il-body"><p>Intune-Konfiguration als Code mit dem Microsoft Graph Provider für Terraform. Versionierung in Git, Staging/Production-Umgebungen, automatisierte Deployments.</p><div class="il-tags"><span>Terraform</span><span>Graph API</span><span>Git</span><span>IaC</span><span>CI/CD</span></div></div>
+        <div class="il-head">
+          <h4 data-de="⚡ Terraform & IaC für Intune" data-en="⚡ Terraform & IaC for Intune">⚡ Terraform &amp; IaC für Intune</h4>
+          <span class="il-chevron" aria-hidden="true">▼</span>
+        </div>
+        <div class="il-body">
+          <p data-de="Intune-Konfiguration als Code mit dem Microsoft Graph Provider für Terraform. Versionierung in Git, Staging/Production-Umgebungen, CI/CD-Pipeline mit Drift Detection. Produktiv eingesetzt für Windows-365-Infrastruktur." data-en="Intune configuration as code using the Microsoft Graph provider for Terraform. Git versioning, staging/production environments, CI/CD pipeline with drift detection. Used in production for Windows 365 infrastructure.">Intune-Konfiguration als Code mit dem Microsoft Graph Provider für Terraform. Versionierung in Git, Staging/Production-Umgebungen, CI/CD-Pipeline mit Drift Detection. Produktiv eingesetzt für Windows-365-Infrastruktur.</p>
+          <div class="il-tags"><span>Terraform</span><span>Graph API</span><span>Git</span><span>IaC</span><span>CI/CD</span></div>
+        </div>
+      </div>
+      <div class="il-item" onclick="toggleItem(this)">
+        <div class="il-head">
+          <h4 data-de="🔄 Migrationen (Tenant, SharePoint, MDM)" data-en="🔄 Migrations (Tenant, SharePoint, MDM)">🔄 Migrationen (Tenant, SharePoint, MDM)</h4>
+          <span class="il-chevron" aria-hidden="true">▼</span>
+        </div>
+        <div class="il-body">
+          <p data-de="Tenant-to-Tenant-Migrationen mit ShareGate, europaweite Fileserver-Migration nach SharePoint Online (ES, PT, GR), Multi-Geo M365-Migrationen. JAMF → Intune für 800+ Geräte. Stufenweise Rollout-Planung ohne Ausfallzeiten." data-en="Tenant-to-tenant migrations via ShareGate, Europe-wide fileserver migrations to SharePoint Online (ES, PT, GR), multi-geo M365 migrations. JAMF → Intune for 800+ devices. Phased rollout planning with zero downtime.">Tenant-to-Tenant-Migrationen mit ShareGate, europaweite Fileserver-Migration nach SharePoint Online (ES, PT, GR), Multi-Geo M365-Migrationen. JAMF → Intune für 800+ Geräte. Stufenweise Rollout-Planung ohne Ausfallzeiten.</p>
+          <div class="il-tags"><span>ShareGate</span><span>SharePoint Online</span><span>Tenant Migration</span><span>JAMF</span><span>Multi-Geo</span></div>
+        </div>
+      </div>
+      <div class="il-item" onclick="toggleItem(this)">
+        <div class="il-head">
+          <h4 data-de="⚙️ Power Automate & Monitoring" data-en="⚙️ Power Automate & Monitoring">⚙️ Power Automate &amp; Monitoring</h4>
+          <span class="il-chevron" aria-hidden="true">▼</span>
+        </div>
+        <div class="il-body">
+          <p data-de="Power-Automate-Flows zur automatischen Erkennung und Korrektur von Fehlkonfigurationen. Automatische Benachrichtigung und Sperrung über Conditional Access bei Non-Compliance. QlikView-Reporting für Enterprise-Kunden." data-en="Power Automate flows for automatic detection and remediation of misconfigurations. Automatic notifications and Conditional Access blocking for non-compliance. QlikView reporting for enterprise clients.">Power-Automate-Flows zur automatischen Erkennung und Korrektur von Fehlkonfigurationen. Automatische Benachrichtigung und Sperrung über Conditional Access bei Non-Compliance. QlikView-Reporting für Enterprise-Kunden.</p>
+          <div class="il-tags"><span>Power Automate</span><span>PowerShell</span><span>QlikView</span><span>Monitoring</span><span>Alerting</span></div>
+        </div>
       </div>
     </div>
 
     <div class="intune-visual a">
       <div class="iv-card">
-        <div class="iv-big">800+</div>
-        <div class="iv-label">Geräte migriert (JAMF → Intune)</div>
+        <div class="iv-big">3.000+</div>
+        <div class="iv-label" data-de="Endgeräte mit Autopilot deployed" data-en="Devices deployed via Autopilot">Endgeräte mit Autopilot deployed</div>
       </div>
       <div class="iv-card">
         <div class="iv-big" style="color:var(--blue)">4</div>
-        <div class="iv-label">Länder gleichzeitig betreut</div>
+        <div class="iv-label" data-de="Länder gleichzeitig betreut" data-en="Countries managed simultaneously">Länder gleichzeitig betreut</div>
       </div>
       <div class="iv-card">
         <div style="text-align:left">
@@ -552,11 +614,11 @@
             <div class="iv-bar"><div class="iv-fill orange bar" data-w="80%"></div></div>
           </div>
         </div>
-        <div class="iv-label" style="margin-top:16px">Plattform-Expertise</div>
+        <div class="iv-label" style="margin-top:16px" data-de="Plattform-Expertise" data-en="Platform expertise">Plattform-Expertise</div>
       </div>
       <div class="iv-card">
         <div class="iv-big" style="color:var(--green)">400 PT</div>
-        <div class="iv-label">Aktives Projektvolumen (HDI)</div>
+        <div class="iv-label" data-de="Aktives Projektvolumen (HDI)" data-en="Active project volume (HDI)">Aktives Projektvolumen (HDI)</div>
       </div>
     </div>
   </div>
@@ -568,63 +630,90 @@
 ════════════════════════════════════════════════ -->
 <section id="projects">
   <div class="a">
-    <div class="slab">Projektportfolio</div>
-    <h2 class="stit">Ausgewählte Projekte</h2>
+    <div class="slab" data-de="Projektportfolio" data-en="Project Portfolio">Projektportfolio</div>
+    <h2 class="stit" data-de="Ausgewählte Projekte" data-en="Selected Projects">Ausgewählte Projekte</h2>
   </div>
 
   <div class="pj-grid">
     <article class="pj feat a">
       <div class="pj-metric" aria-hidden="true">400 PT</div>
-      <div class="pj-badge act">Aktives Projekt</div>
-      <div class="pj-ind">Versicherung</div>
+      <div class="pj-badge act" data-de="Aktives Projekt" data-en="Active Project">Aktives Projekt</div>
+      <div class="pj-ind" data-de="Versicherung" data-en="Insurance">Versicherung</div>
       <h3>HDI — M365 Consulting &amp; Modern Workplace</h3>
-      <p>Laufendes Beratungsprojekt mit 400 PT Volumen. Projektorganisation, Windows-365-Bereitstellung, QlikView-Reporting (Skript-Korrekturen, dynamische Jahreslogiken), Power-Automate-Automatisierung und Akquise weiterer Ausschreibungen.</p>
-      <div class="pj-tags"><span>Windows 365</span><span>QlikView</span><span>Power Automate</span><span>Intune</span><span>Sharegate</span><span>Teams Phone</span></div>
+      <p data-de="Laufendes Beratungsprojekt mit 400 PT Volumen. Windows-365-Bereitstellung über Terraform, QlikView-Reporting (Skript-Korrekturen, dynamische Jahreslogiken), Power-Automate-Automatisierung, Fileserver-Migration nach SharePoint Online und Akquise weiterer Ausschreibungen." data-en="Ongoing consulting engagement with 400 PT volume. Windows 365 deployment via Terraform, QlikView reporting (script corrections, dynamic year logic), Power Automate automation, fileserver migration to SharePoint Online, and new tender acquisition.">Laufendes Beratungsprojekt mit 400 PT Volumen. Windows-365-Bereitstellung über Terraform, QlikView-Reporting (Skript-Korrekturen, dynamische Jahreslogiken), Power-Automate-Automatisierung, Fileserver-Migration nach SharePoint Online und Akquise weiterer Ausschreibungen.</p>
+      <div class="pj-tags"><span>Windows 365</span><span>Terraform</span><span>QlikView</span><span>Power Automate</span><span>Intune</span><span>ShareGate</span><span>Teams Phone</span></div>
+    </article>
+
+    <article class="pj a">
+      <div class="pj-metric" aria-hidden="true">3.000+</div>
+      <div class="pj-badge done" data-de="Abgeschlossen" data-en="Completed">Abgeschlossen</div>
+      <div class="pj-ind" data-de="IT & Consulting" data-en="IT & Consulting">IT &amp; Consulting</div>
+      <h3 data-de="Hybrid Autopilot Rollout — 3.000+ Endgeräte" data-en="Hybrid Autopilot Rollout — 3,000+ Devices">Hybrid Autopilot Rollout — 3.000+ Endgeräte</h3>
+      <p data-de="Planung und Einführung von Windows Autopilot (Hybrid Azure AD Join) für über 3.000 Endgeräte. App-Paketierung, Solution Design, Intune-Policies für Windows, Android und iOS sowie Einrichtung von ABM und macOS-Enrollment." data-en="Design and rollout of Windows Autopilot (Hybrid Azure AD Join) for over 3,000 devices. App packaging, solution design, Intune policies for Windows, Android and iOS, plus ABM setup and macOS enrollment.">Planung und Einführung von Windows Autopilot (Hybrid Azure AD Join) für über 3.000 Endgeräte. App-Paketierung, Solution Design, Intune-Policies für Windows, Android und iOS sowie Einrichtung von ABM und macOS-Enrollment.</p>
+      <div class="pj-tags"><span>Autopilot</span><span>Hybrid Azure AD</span><span>App Packaging</span><span>ABM</span><span>Intune</span></div>
     </article>
 
     <article class="pj a">
       <div class="pj-metric" aria-hidden="true">✓</div>
-      <div class="pj-badge done">Abgeschlossen</div>
-      <div class="pj-ind">Energie / Heiztechnik</div>
-      <h3>Vaillant — Endpoint &amp; M365</h3>
-      <p>Eigenverantwortlicher Abschluss eines M365- und Endpoint-Projekts. Komplette Verantwortung von Planung bis Übergabe.</p>
-      <div class="pj-tags"><span>Intune</span><span>M365</span><span>Endpoint</span><span>Consulting</span></div>
+      <div class="pj-badge done" data-de="Abgeschlossen" data-en="Completed">Abgeschlossen</div>
+      <div class="pj-ind" data-de="IT & Consulting" data-en="IT & Consulting">IT &amp; Consulting</div>
+      <h3 data-de="Intune Greenfield & Cloud Transformation" data-en="Intune Greenfield & Cloud Transformation">Intune Greenfield &amp; Cloud Transformation</h3>
+      <p data-de="Vollständiger Aufbau eines Intune-Tenants inkl. Entra ID, Autopilot, Compliance Policies, Security Baselines, Defender Onboarding und Conditional Access. Rollout über mehrere Migrationsphasen mit inkrementeller Geräteübernahme." data-en="Full build-out of an Intune tenant including Entra ID, Autopilot, compliance policies, security baselines, Defender onboarding and Conditional Access. Phased rollout with incremental device migration.">Vollständiger Aufbau eines Intune-Tenants inkl. Entra ID, Autopilot, Compliance Policies, Security Baselines, Defender Onboarding und Conditional Access. Rollout über mehrere Migrationsphasen mit inkrementeller Geräteübernahme.</p>
+      <div class="pj-tags"><span>Intune</span><span>Entra ID</span><span>Autopilot</span><span>Defender</span><span>Conditional Access</span></div>
+    </article>
+
+    <article class="pj a">
+      <div class="pj-metric" aria-hidden="true">ES·PT·GR</div>
+      <div class="pj-badge done" data-de="Abgeschlossen" data-en="Completed">Abgeschlossen</div>
+      <div class="pj-ind" data-de="IT & Consulting" data-en="IT & Consulting">IT &amp; Consulting</div>
+      <h3 data-de="EU-weite Fileserver-Migration nach SharePoint Online" data-en="EU-Wide Fileserver Migration to SharePoint Online">EU-weite Fileserver-Migration nach SharePoint Online</h3>
+      <p data-de="Steuerung europaweiter Fileserver-Migrationen nach SharePoint Online mit ShareGate über mehrere Standorte (ES, PT, GR). Konzeption der Teams-Struktur, Berechtigungsmatrix und inkrementelle Migrationen." data-en="Managing Europe-wide fileserver migrations to SharePoint Online via ShareGate across multiple sites (ES, PT, GR). Teams structure design, permissions matrix, and incremental migrations.">Steuerung europaweiter Fileserver-Migrationen nach SharePoint Online mit ShareGate über mehrere Standorte (ES, PT, GR). Konzeption der Teams-Struktur, Berechtigungsmatrix und inkrementelle Migrationen.</p>
+      <div class="pj-tags"><span>ShareGate</span><span>SharePoint Online</span><span>Microsoft Teams</span><span>M365</span></div>
+    </article>
+
+    <article class="pj a">
+      <div class="pj-metric" aria-hidden="true">W365</div>
+      <div class="pj-badge done" data-de="Abgeschlossen" data-en="Completed">Abgeschlossen</div>
+      <div class="pj-ind" data-de="IT & Consulting" data-en="IT & Consulting">IT &amp; Consulting</div>
+      <h3 data-de="Windows 365 & Terraform-Infrastruktur" data-en="Windows 365 & Terraform Infrastructure">Windows 365 &amp; Terraform-Infrastruktur</h3>
+      <p data-de="Konzeption und Umsetzung einer Terraform-basierten W365-Umgebung: Provisioning Policies, Conditional Access, Defender-Konfiguration, Security Baselines und Drift Detection via CI/CD-Pipeline." data-en="Design and implementation of a Terraform-based W365 environment: provisioning policies, Conditional Access, Defender configuration, security baselines, and drift detection via CI/CD pipeline.">Konzeption und Umsetzung einer Terraform-basierten W365-Umgebung: Provisioning Policies, Conditional Access, Defender-Konfiguration, Security Baselines und Drift Detection via CI/CD-Pipeline.</p>
+      <div class="pj-tags"><span>Windows 365</span><span>Terraform</span><span>CI/CD</span><span>Defender</span><span>Entra ID</span></div>
     </article>
 
     <article class="pj a">
       <div class="pj-metric" aria-hidden="true">800+</div>
       <div class="pj-badge mig">Migration</div>
       <div class="pj-ind">HealthTech</div>
-      <h3>macOS-Migration JAMF → Intune</h3>
-      <p>800+ macOS-Geräte über 4 Länder migriert. Enrollment-Profile, App-Deployments, Compliance — ohne signifikante Ausfallzeiten.</p>
+      <h3 data-de="macOS-Migration JAMF → Intune (800+ Geräte)" data-en="macOS Migration JAMF → Intune (800+ Devices)">macOS-Migration JAMF → Intune (800+ Geräte)</h3>
+      <p data-de="Migration einer internationalen macOS-Flotte von JAMF Pro zu Microsoft Intune über vier Länder (DE, FR, IT, NL). Enrollment-Profile, App-Deployments und Compliance-Richtlinien ohne signifikante Ausfallzeiten." data-en="Migration of an international macOS fleet from JAMF Pro to Microsoft Intune across four countries (DE, FR, IT, NL). Enrollment profiles, app deployments and compliance policies with zero significant downtime.">Migration einer internationalen macOS-Flotte von JAMF Pro zu Microsoft Intune über vier Länder (DE, FR, IT, NL). Enrollment-Profile, App-Deployments und Compliance-Richtlinien ohne signifikante Ausfallzeiten.</p>
       <div class="pj-tags"><span>Intune</span><span>JAMF</span><span>macOS</span><span>ABM</span></div>
     </article>
 
     <article class="pj a">
-      <div class="pj-metric" aria-hidden="true">RBAC</div>
-      <div class="pj-badge done">Abgeschlossen</div>
-      <div class="pj-ind">HealthTech</div>
-      <h3>Intune-Restrukturierung &amp; Compliance</h3>
-      <p>Tenant-Optimierung: RBAC, Scope Tags, dynamische Gruppen, Layered Compliance, Defender-Integration, Conditional Access. Runbooks für IT-Admins.</p>
-      <div class="pj-tags"><span>Intune</span><span>Defender</span><span>CA</span><span>RBAC</span></div>
-    </article>
-
-    <article class="pj a">
-      <div class="pj-metric" aria-hidden="true">W365</div>
-      <div class="pj-badge done">Abgeschlossen</div>
-      <div class="pj-ind">Branchenübergreifend</div>
-      <h3>Windows 365 &amp; AVD Deployment</h3>
-      <p>Windows 365 und Azure Virtual Desktop für internationale Teams. Provisionierung, Sicherheitsbaselines, Teams Phone Rollout.</p>
-      <div class="pj-tags"><span>Windows 365</span><span>AVD</span><span>Teams Phone</span><span>Entra ID</span></div>
-    </article>
-
-    <article class="pj a">
-      <div class="pj-metric" aria-hidden="true">iOS</div>
+      <div class="pj-metric" aria-hidden="true">T2T</div>
       <div class="pj-badge mig">Migration</div>
-      <div class="pj-ind">HealthTech</div>
-      <h3>iOS-Migration G Suite → Intune</h3>
-      <p>iOS-Geräte aus G Suite MDM in Intune überführt. Enrollment-Profile, Sicherheitsrichtlinien, Endnutzer-Schulungen.</p>
-      <div class="pj-tags"><span>iOS</span><span>G Suite</span><span>Intune</span><span>MDM</span></div>
+      <div class="pj-ind" data-de="IT & Consulting" data-en="IT & Consulting">IT &amp; Consulting</div>
+      <h3 data-de="Tenant-to-Tenant-Migration (ShareGate)" data-en="Tenant-to-Tenant Migration (ShareGate)">Tenant-to-Tenant-Migration (ShareGate)</h3>
+      <p data-de="Planung und Durchführung einer SharePoint- und OneDrive-Migration zwischen Tenants. Einrichtung von ShareGate, Testmigrationen und vollständige Massenmigration mit Berechtigungs-Mapping." data-en="Planning and execution of a SharePoint and OneDrive migration between tenants. ShareGate setup, test migrations, and full bulk migration including permissions mapping.">Planung und Durchführung einer SharePoint- und OneDrive-Migration zwischen Tenants. Einrichtung von ShareGate, Testmigrationen und vollständige Massenmigration mit Berechtigungs-Mapping.</p>
+      <div class="pj-tags"><span>ShareGate</span><span>SharePoint</span><span>OneDrive</span><span>M365</span></div>
+    </article>
+
+    <article class="pj a">
+      <div class="pj-metric" aria-hidden="true">✓</div>
+      <div class="pj-badge done" data-de="Abgeschlossen" data-en="Completed">Abgeschlossen</div>
+      <div class="pj-ind" data-de="Energie / Heiztechnik" data-en="Energy / Heating Technology">Energie / Heiztechnik</div>
+      <h3>Vaillant — Endpoint &amp; M365</h3>
+      <p data-de="Eigenverantwortlicher Abschluss eines M365- und Endpoint-Projekts. Komplette Verantwortung von Planung bis Übergabe inkl. Autopilot-Konfiguration und Intune-Restrukturierung." data-en="Independent completion of an M365 and endpoint project. Full ownership from planning to handover including Autopilot configuration and Intune restructuring.">Eigenverantwortlicher Abschluss eines M365- und Endpoint-Projekts. Komplette Verantwortung von Planung bis Übergabe inkl. Autopilot-Konfiguration und Intune-Restrukturierung.</p>
+      <div class="pj-tags"><span>Intune</span><span>M365</span><span>Autopilot</span><span>Consulting</span></div>
+    </article>
+
+    <article class="pj a">
+      <div class="pj-metric" aria-hidden="true">Multi-Geo</div>
+      <div class="pj-badge done" data-de="Abgeschlossen" data-en="Completed">Abgeschlossen</div>
+      <div class="pj-ind" data-de="IT & Consulting" data-en="IT & Consulting">IT &amp; Consulting</div>
+      <h3 data-de="Multi-Geo M365-Migration" data-en="Multi-Geo M365 Migration">Multi-Geo M365-Migration</h3>
+      <p data-de="Steuerung einer M365-Migration in einer Multi-Geo-Umgebung. Intune-Tenant-Review, Solution Design, Autopilot-Konfiguration und standortübergreifende Koordination mehrerer internationaler Standorte." data-en="Managing an M365 migration in a multi-geo environment. Intune tenant review, solution design, Autopilot configuration and cross-site coordination across multiple international locations.">Steuerung einer M365-Migration in einer Multi-Geo-Umgebung. Intune-Tenant-Review, Solution Design, Autopilot-Konfiguration und standortübergreifende Koordination mehrerer internationaler Standorte.</p>
+      <div class="pj-tags"><span>M365</span><span>Multi-Geo</span><span>Autopilot</span><span>Intune</span></div>
     </article>
   </div>
 </section>
@@ -635,48 +724,60 @@
 ════════════════════════════════════════════════ -->
 <section id="exp">
   <div class="a">
-    <div class="slab">Werdegang</div>
-    <h2 class="stit">Berufserfahrung &amp; Zertifizierungen</h2>
+    <div class="slab" data-de="Werdegang" data-en="Experience">Werdegang</div>
+    <h2 class="stit" data-de="Berufserfahrung & Zertifizierungen" data-en="Career & Certifications">Berufserfahrung &amp; Zertifizierungen</h2>
   </div>
 
   <div class="exp-g">
     <!-- Timeline -->
     <div class="tl a">
       <div class="ti">
-        <div class="td">2024 — heute</div>
-        <div class="tr">M365 Consultant (C2)</div>
-        <div class="tc">Cluster Reply · Berlin</div>
-        <div class="tx">Endpoint-Management-, Migrations- und Modern-Workplace-Projekte für Enterprise-Kunden. Intune-Architektur, Teams Phone, Windows 365, Power Automate, QlikView. Kundenprojekte u.a. HDI und Vaillant.</div>
+        <div class="td">06/2025 — <span data-de="heute" data-en="present">heute</span></div>
+        <div class="tr" data-de="Senior Consultant — Endpoint & M365" data-en="Senior Consultant — Endpoint & M365">Senior Consultant — Endpoint &amp; M365</div>
+        <div class="tc">Cluster Azure Reply · Berlin</div>
+        <div class="tx" data-de="Technische Leitung komplexer Intune- und M365-Projekte im Enterprise-Umfeld. Cloud-Transformationen, Tenant-Migrationen, Security-Implementierungen. Terraform-basierte Windows-365-Infrastruktur, europaweite Fileserver-Migrationen (ES, PT, GR), Greenfield Intune-Aufbau, Multi-Geo M365-Migration. Mentoring von Junior Consultants." data-en="Technical leadership of complex Intune and M365 projects in enterprise environments. Cloud transformations, tenant migrations, security implementations. Terraform-based Windows 365 infrastructure, Europe-wide fileserver migrations (ES, PT, GR), Intune greenfield build-out, multi-geo M365 migration. Mentoring junior consultants.">Technische Leitung komplexer Intune- und M365-Projekte im Enterprise-Umfeld. Cloud-Transformationen, Tenant-Migrationen, Security-Implementierungen. Terraform-basierte Windows-365-Infrastruktur, europaweite Fileserver-Migrationen (ES, PT, GR), Greenfield Intune-Aufbau, Multi-Geo M365-Migration. Mentoring von Junior Consultants.</div>
       </div>
       <div class="ti">
-        <div class="td">2023 — heute</div>
-        <div class="tr">Gründer &amp; CEO</div>
+        <div class="td">12/2024 — 05/2025</div>
+        <div class="tr" data-de="Consultant — Endpoint & M365" data-en="Consultant — Endpoint & M365">Consultant — Endpoint &amp; M365</div>
+        <div class="tc">Cluster Azure Reply · Berlin</div>
+        <div class="tx" data-de="Planung und Einführung von Windows Autopilot (Hybrid Azure AD Join) für über 3.000 Endgeräte inkl. App-Paketierung und Solution Design. Intune-Strukturen mit RBAC, dynamischen Gruppen, Compliance Policies und Conditional Access. Einführung von Teams Phone und Unterstützung bei Carve-out-Projekten." data-en="Design and rollout of Windows Autopilot (Hybrid Azure AD Join) for over 3,000 devices including app packaging and solution design. Intune structures with RBAC, dynamic groups, compliance policies and Conditional Access. Teams Phone rollout and support for carve-out projects.">Planung und Einführung von Windows Autopilot (Hybrid Azure AD Join) für über 3.000 Endgeräte inkl. App-Paketierung und Solution Design. Intune-Strukturen mit RBAC, dynamischen Gruppen, Compliance Policies und Conditional Access. Einführung von Teams Phone und Unterstützung bei Carve-out-Projekten.</div>
+      </div>
+      <div class="ti p">
+        <div class="td">06/2024 — 03/2025</div>
+        <div class="tr" data-de="IT Engineer" data-en="IT Engineer">IT Engineer</div>
+        <div class="tc">Doctolib GmbH · Berlin</div>
+        <div class="tx" data-de="Management und Optimierung von Endgeräten über vier Länder (DE, FR, IT, NL). Implementierung fortschrittlicher IT-Lösungen zur Steigerung der Teamproduktivität. Zusammenarbeit mit IT Operations & Security für Compliance-Standards." data-en="Management and optimisation of endpoints across four countries (DE, FR, IT, NL). Implementation of advanced IT solutions to increase team productivity. Collaboration with IT Operations & Security for compliance standards.">Management und Optimierung von Endgeräten über vier Länder (DE, FR, IT, NL). Implementierung fortschrittlicher IT-Lösungen zur Steigerung der Teamproduktivität. Zusammenarbeit mit IT Operations &amp; Security für Compliance-Standards.</div>
+      </div>
+      <div class="ti p">
+        <div class="td">01/2024 — 06/2024</div>
+        <div class="tr" data-de="Senior IT Support Specialist" data-en="Senior IT Support Specialist">Senior IT Support Specialist</div>
+        <div class="tc">Doctolib GmbH · Berlin</div>
+        <div class="tx" data-de="Migration der macOS-Flotte (800+ Geräte) von JAMF zu Intune. Optimierung der Intune-Tenant-Konfiguration, Policies und Security Baselines. Endpoint-Sicherheit mit Defender for Endpoint und Windows Update for Business." data-en="Migration of the macOS fleet (800+ devices) from JAMF to Intune. Optimisation of Intune tenant configuration, policies and security baselines. Endpoint security with Defender for Endpoint and Windows Update for Business.">Migration der macOS-Flotte (800+ Geräte) von JAMF zu Intune. Optimierung der Intune-Tenant-Konfiguration, Policies und Security Baselines. Endpoint-Sicherheit mit Defender for Endpoint und Windows Update for Business.</div>
+      </div>
+      <div class="ti p">
+        <div class="td">07/2021 — 12/2023</div>
+        <div class="tr" data-de="IT Support Specialist" data-en="IT Support Specialist">IT Support Specialist</div>
+        <div class="tc">Doctolib GmbH · Berlin</div>
+        <div class="tx" data-de="Verwaltung von MDM-Lösungen (Intune, JAMF, ABM) über Windows, macOS und iOS. Aufbau von Cloud-Infrastrukturen mit AWS und Terraform. Automatisierung von IT-Prozessen mit Python-Skripten. Einführung von Asset-Management-Tools und Durchführung von IT-Audits." data-en="Management of MDM solutions (Intune, JAMF, ABM) across Windows, macOS and iOS. Building cloud infrastructure with AWS and Terraform. Automation of IT processes with Python scripts. Introduction of asset management tools and IT audits.">Verwaltung von MDM-Lösungen (Intune, JAMF, ABM) über Windows, macOS und iOS. Aufbau von Cloud-Infrastrukturen mit AWS und Terraform. Automatisierung von IT-Prozessen mit Python-Skripten. Einführung von Asset-Management-Tools und Durchführung von IT-Audits.</div>
+      </div>
+      <div class="ti p">
+        <div class="td">05/2019 — 09/2021</div>
+        <div class="tr" data-de="Working Student — IT Support" data-en="Working Student — IT Support">Working Student — IT Support</div>
+        <div class="tc">Doctolib GmbH · Berlin</div>
+        <div class="tx" data-de="2nd- und 3rd-Level-Support in SLA-getriebener Umgebung. Netzwerkinfrastruktur (Cisco Meraki: VPNs, Switches, APs). Grundstein für die spätere Endpoint-Spezialisierung." data-en="2nd and 3rd-level support in an SLA-driven environment. Network infrastructure (Cisco Meraki: VPNs, switches, APs). Foundation for the later endpoint specialisation.">2nd- und 3rd-Level-Support in SLA-getriebener Umgebung. Netzwerkinfrastruktur (Cisco Meraki: VPNs, Switches, APs). Grundstein für die spätere Endpoint-Spezialisierung.</div>
+      </div>
+      <div class="ti">
+        <div class="td">01/2023 — <span data-de="heute" data-en="present">heute</span></div>
+        <div class="tr" data-de="Gründer & CEO" data-en="Founder & CEO">Gründer &amp; CEO</div>
         <div class="tc">Tech Recycling Berlin</div>
-        <div class="tx">Sichere IT-Hardware-Entsorgung. Zertifizierte Datenlöschung, Buyback-Modell, CO₂-Reporting für ESG/CSR.</div>
-      </div>
-      <div class="ti p">
-        <div class="td">2022 — 2024</div>
-        <div class="tr">Senior IT Engineer</div>
-        <div class="tc">Doctolib · Berlin</div>
-        <div class="tx">Intune &amp; Endpoint Security über 4 Länder. Migration 800+ Geräte JAMF → Intune, Autopilot, Conditional Access, Defender, SaaS-Koordination.</div>
-      </div>
-      <div class="ti p">
-        <div class="td">2021 — 2022</div>
-        <div class="tr">IT Engineer</div>
-        <div class="tc">Doctolib · Berlin</div>
-        <div class="tx">MDM mit Intune, JAMF, ABM. SaaS-Plattformen, Cloud-Infra (AWS/Terraform), Python-Automatisierung, IT-Asset-Audits.</div>
-      </div>
-      <div class="ti p">
-        <div class="td">2019 — 2021</div>
-        <div class="tr">IT Support Specialist</div>
-        <div class="tc">Doctolib · Berlin</div>
-        <div class="tx">Level 2/3 Support, Netzwerk (Cisco Meraki), SaaS-Integration, Device Lifecycle. Grundstein für Endpoint-Spezialisierung.</div>
+        <div class="tx" data-de="Aufbau eines Unternehmens für nachhaltige IT-Hardware-Entsorgung mit zertifizierter Datenlöschung, Buyback-Modell und CO₂-Reporting für ESG/CSR." data-en="Building a company for sustainable IT hardware disposal with certified data erasure, buyback model and CO₂ reporting for ESG/CSR.">Aufbau eines Unternehmens für nachhaltige IT-Hardware-Entsorgung mit zertifizierter Datenlöschung, Buyback-Modell und CO₂-Reporting für ESG/CSR.</div>
       </div>
     </div>
 
     <!-- Certs, education, languages, stack -->
     <div class="a">
-      <h3 style="font-size:16px;font-weight:700;margin-bottom:14px">Zertifizierungen</h3>
+      <h3 style="font-size:16px;font-weight:700;margin-bottom:14px" data-de="Zertifizierungen" data-en="Certifications">Zertifizierungen</h3>
       <div class="cp">
         <a href="https://learn.microsoft.com/api/credentials/share/en-us/TunahanAydin-9013/4AAA1896CF4E1AD8?sharingId=DABA4A94F264425B" target="_blank" rel="noopener noreferrer" class="cc">
           <div class="ci" aria-hidden="true">🏆</div>
@@ -695,20 +796,20 @@
         </a>
       </div>
 
-      <h3 style="font-size:16px;font-weight:700;margin-top:32px;margin-bottom:10px">Ausbildung</h3>
+      <h3 style="font-size:16px;font-weight:700;margin-top:32px;margin-bottom:10px" data-de="Ausbildung" data-en="Education">Ausbildung</h3>
       <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--rs);padding:18px 22px">
-        <div style="font-weight:700;font-size:15px">B.Sc. Volkswirtschaftslehre</div>
+        <div style="font-weight:700;font-size:15px" data-de="B.Sc. Volkswirtschaftslehre" data-en="B.Sc. Economics">B.Sc. Volkswirtschaftslehre</div>
         <div style="font-family:var(--fm);font-size:12px;color:var(--text-3);margin-top:3px">TU Berlin · 2019 — 2022</div>
       </div>
 
-      <h3 style="font-size:16px;font-weight:700;margin-top:32px;margin-bottom:10px">Sprachen</h3>
+      <h3 style="font-size:16px;font-weight:700;margin-top:32px;margin-bottom:10px" data-de="Sprachen" data-en="Languages">Sprachen</h3>
       <div style="display:flex;gap:8px;flex-wrap:wrap">
-        <span style="padding:7px 14px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--rx);font-size:13px;font-weight:500">🇩🇪 Deutsch — Muttersprache</span>
-        <span style="padding:7px 14px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--rx);font-size:13px;font-weight:500">🇬🇧 Englisch — C1</span>
-        <span style="padding:7px 14px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--rx);font-size:13px;font-weight:500">🇹🇷 Türkisch — Muttersprache</span>
+        <span style="padding:7px 14px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--rx);font-size:13px;font-weight:500" data-de="🇩🇪 Deutsch — Muttersprache" data-en="🇩🇪 German — Native">🇩🇪 Deutsch — Muttersprache</span>
+        <span style="padding:7px 14px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--rx);font-size:13px;font-weight:500" data-de="🇬🇧 Englisch — C1" data-en="🇬🇧 English — C1">🇬🇧 Englisch — C1</span>
+        <span style="padding:7px 14px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--rx);font-size:13px;font-weight:500" data-de="🇹🇷 Türkisch — Muttersprache" data-en="🇹🇷 Turkish — Native">🇹🇷 Türkisch — Muttersprache</span>
       </div>
 
-      <h3 style="font-size:16px;font-weight:700;margin-top:32px;margin-bottom:10px">Tech Stack (Auszug)</h3>
+      <h3 style="font-size:16px;font-weight:700;margin-top:32px;margin-bottom:10px" data-de="Tech Stack (Auszug)" data-en="Tech Stack (Selection)">Tech Stack (Auszug)</h3>
       <div class="tcat">
         <div class="tcl">Endpoint &amp; MDM</div>
         <div class="tg">
@@ -722,9 +823,9 @@
         </div>
       </div>
       <div class="tcat">
-        <div class="tcl">Automation</div>
+        <div class="tcl" data-de="Automation" data-en="Automation">Automation</div>
         <div class="tg">
-          <span class="tt c">Power Automate</span><span class="tt c">PowerShell</span><span class="tt">Python</span><span class="tt">Terraform</span><span class="tt">Sharegate</span><span class="tt">Graph API</span>
+          <span class="tt c">Power Automate</span><span class="tt c">PowerShell</span><span class="tt">Python</span><span class="tt">Terraform</span><span class="tt">ShareGate</span><span class="tt">Graph API</span>
         </div>
       </div>
     </div>
@@ -737,14 +838,14 @@
 ════════════════════════════════════════════════ -->
 <section id="contact">
   <div class="a">
-    <div class="slab" style="text-align:center">Kontakt</div>
-    <h2 class="stit" style="text-align:center">Projekt besprechen?</h2>
+    <div class="slab" style="text-align:center" data-de="Kontakt" data-en="Contact">Kontakt</div>
+    <h2 class="stit" style="text-align:center" data-de="Projekt besprechen?" data-en="Discuss a project?">Projekt besprechen?</h2>
   </div>
 
   <div class="cw a">
-    <p>Ob Intune-Restrukturierung, Migration, Autopilot-Rollout oder Tenant-Härtung — lassen Sie uns sprechen. Remote bevorzugt, Hybrid möglich.</p>
+    <p data-de="Ob Intune-Restrukturierung, Migration, Autopilot-Rollout oder Tenant-Härtung — lassen Sie uns sprechen. Remote bevorzugt, Hybrid möglich." data-en="Whether Intune restructuring, migration, Autopilot rollout or tenant hardening — let's talk. Remote preferred, hybrid possible.">Ob Intune-Restrukturierung, Migration, Autopilot-Rollout oder Tenant-Härtung — lassen Sie uns sprechen. Remote bevorzugt, Hybrid möglich.</p>
     <div class="ccs">
-      <a href="mailto:t.aydin6195@gmail.com" class="ccd">
+      <a href="mailto:hello@aydin.consulting" class="ccd">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         E-Mail
       </a>
@@ -757,7 +858,7 @@
         Freelancermap
       </a>
     </div>
-    <div class="cmeta">Berlin · Remote-fähig · Teilweise verfügbar</div>
+    <div class="cmeta" data-de="Berlin · Remote-fähig · Teilweise verfügbar" data-en="Berlin · Remote-ready · Partially available">Berlin · Remote-fähig · Teilweise verfügbar</div>
   </div>
 </section>
 

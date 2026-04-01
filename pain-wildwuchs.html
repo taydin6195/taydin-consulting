@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Intune Tenant Restrukturierung — aydin.consulting</title>
   <meta name="description" content="Wildgewachsene Intune-Tenants sauber strukturieren: RBAC, Scope Tags, dynamische Gruppen, Naming Conventions. Tunahan Aydin, Microsoft Intune Consultant Berlin.">
+  <script>(function(){var l=localStorage.getItem('lang')||'de';document.documentElement.lang=l;document.documentElement.dataset.lang=l;})();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -13,96 +14,92 @@
 <body>
 
 <nav aria-label="Hauptnavigation">
-  <div class="nl">aydin<span>.consulting</span></div>
+  <a href="index.html" class="nl" aria-label="aydin.consulting">aydin<span>.consulting</span></a>
   <ul class="nk" id="nav-menu" role="list">
     <li><a href="index.html#pain">Pain Points</a></li>
     <li><a href="index.html#intune">Intune Deep Dive</a></li>
-    <li><a href="index.html#projects">Projekte</a></li>
-    <li><a href="index.html#exp">Werdegang</a></li>
-    <li><a href="index.html#contact" class="nc">Kontakt</a></li>
+    <li><a href="index.html#projects" data-de="Projekte" data-en="Projects">Projekte</a></li>
+    <li><a href="index.html#exp" data-de="Werdegang" data-en="Experience">Werdegang</a></li>
+    <li><a href="index.html#contact" class="nc" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
   </ul>
+  <button class="lang-toggle" id="lang-toggle" aria-label="Switch to English">EN</button>
   <button class="nav-toggle" id="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Menü öffnen">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
   </button>
 </nav>
 
 <main>
-  <!-- Hero -->
   <div class="detail-hero">
     <div class="detail-hero-bg" aria-hidden="true"></div>
     <div class="detail-hero-inner">
-      <a href="index.html#pain" class="back-link">← Alle Pain Points</a>
+      <a href="index.html#pain" class="back-link" data-de="← Alle Pain Points" data-en="← All Pain Points">← Alle Pain Points</a>
       <div class="detail-icon-wrap" style="background:var(--red-light)" aria-hidden="true">🔥</div>
-      <div class="detail-badge">Tenant-Management</div>
-      <h1>Ihr Intune-Tenant ist ein <span class="acc">Wildwuchs</span></h1>
-      <p class="lead">Doppelte Profile, veraltete Policies, keine klare Gruppenstruktur — das ist der Normalzustand in gewachsenen Tenants. Ich bringe Ordnung rein, ohne den laufenden Betrieb zu unterbrechen.</p>
+      <div class="detail-badge" data-de="Tenant-Management" data-en="Tenant Management">Tenant-Management</div>
+      <h1 data-de-html="Ihr Intune-Tenant ist ein <span class='acc'>Wildwuchs</span>" data-en-html="Your Intune Tenant is a <span class='acc'>Complete Mess</span>">Ihr Intune-Tenant ist ein <span class="acc">Wildwuchs</span></h1>
+      <p class="lead" data-de="Doppelte Profile, veraltete Policies, keine klare Gruppenstruktur — das ist der Normalzustand in gewachsenen Tenants. Ich bringe Ordnung rein, ohne den laufenden Betrieb zu unterbrechen." data-en="Duplicate profiles, outdated policies, no clear group structure — the normal state of an organically grown tenant. I bring order without interrupting day-to-day operations.">Doppelte Profile, veraltete Policies, keine klare Gruppenstruktur — das ist der Normalzustand in gewachsenen Tenants. Ich bringe Ordnung rein, ohne den laufenden Betrieb zu unterbrechen.</p>
     </div>
   </div>
 
-  <!-- Problem -->
   <section class="detail-section">
     <div class="detail-section-inner">
-      <h2>Das Problem</h2>
-      <p class="section-intro">In den meisten Unternehmen wächst Intune organisch: Ein Admin fügt ein Profil hinzu, ein anderer eine Policy, niemand dokumentiert. Nach zwei Jahren weiß keiner mehr, was worauf wirkt.</p>
+      <h2 data-de="Das Problem" data-en="The Problem">Das Problem</h2>
+      <p class="section-intro" data-de="In den meisten Unternehmen wächst Intune organisch: Ein Admin fügt ein Profil hinzu, ein anderer eine Policy, niemand dokumentiert. Nach zwei Jahren weiß keiner mehr, was worauf wirkt." data-en="In most organisations, Intune grows organically: one admin adds a profile, another adds a policy, nobody documents. After two years, nobody knows what applies to what.">In den meisten Unternehmen wächst Intune organisch: Ein Admin fügt ein Profil hinzu, ein anderer eine Policy, niemand dokumentiert. Nach zwei Jahren weiß keiner mehr, was worauf wirkt.</p>
       <div class="problem-block">
-        <p>Ohne klare Architektur wird Intune zum Risikofeld: Richtlinien greifen auf den falschen Geräten, neue Mitarbeiter bekommen zu viele oder zu wenige Rechte, und jede Änderung ist ein Blindflug.</p>
-        <p>Im schlimmsten Fall führt das zu Compliance-Verstößen — weil niemand nachweisen kann, welche Security-Einstellungen tatsächlich aktiv sind.</p>
+        <p data-de="Ohne klare Architektur wird Intune zum Risikofeld: Richtlinien greifen auf den falschen Geräten, neue Mitarbeiter bekommen zu viele oder zu wenige Rechte, und jede Änderung ist ein Blindflug." data-en="Without a clear architecture, Intune becomes a risk area: policies apply to the wrong devices, new employees get too many or too few rights, and every change is a shot in the dark.">Ohne klare Architektur wird Intune zum Risikofeld: Richtlinien greifen auf den falschen Geräten, neue Mitarbeiter bekommen zu viele oder zu wenige Rechte, und jede Änderung ist ein Blindflug.</p>
+        <p data-de="Im schlimmsten Fall führt das zu Compliance-Verstößen — weil niemand nachweisen kann, welche Security-Einstellungen tatsächlich aktiv sind." data-en="In the worst case, this leads to compliance violations — because nobody can prove which security settings are actually active.">Im schlimmsten Fall führt das zu Compliance-Verstößen — weil niemand nachweisen kann, welche Security-Einstellungen tatsächlich aktiv sind.</p>
         <div class="problem-symptoms">
-          <div class="symptom"><span class="symptom-icon">⚠️</span>Doppelte oder widersprüchliche Configuration Profiles auf denselben Geräten</div>
-          <div class="symptom"><span class="symptom-icon">⚠️</span>Statische Gruppen statt dynamischer Zuweisungen — Mitarbeiter werden manuell zugeordnet</div>
-          <div class="symptom"><span class="symptom-icon">⚠️</span>Kein RBAC: Alle Admins sehen und ändern alles, kein Scope-Trennung</div>
-          <div class="symptom"><span class="symptom-icon">⚠️</span>Naming-Chaos: Profile heißen „Policy_neu2_final_v3"</div>
-          <div class="symptom"><span class="symptom-icon">⚠️</span>Keine Dokumentation — Wissen liegt bei einzelnen Personen</div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span><span data-de="Doppelte oder widersprüchliche Configuration Profiles auf denselben Geräten" data-en="Duplicate or conflicting configuration profiles on the same devices">Doppelte oder widersprüchliche Configuration Profiles auf denselben Geräten</span></div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span><span data-de="Statische Gruppen statt dynamischer Zuweisungen — Mitarbeiter werden manuell zugeordnet" data-en="Static groups instead of dynamic assignments — employees assigned manually">Statische Gruppen statt dynamischer Zuweisungen — Mitarbeiter werden manuell zugeordnet</span></div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span><span data-de="Kein RBAC: Alle Admins sehen und ändern alles, keine Scope-Trennung" data-en="No RBAC: all admins can see and change everything, no scope separation">Kein RBAC: Alle Admins sehen und ändern alles, keine Scope-Trennung</span></div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span><span data-de="Naming-Chaos: Profile heißen „Policy_neu2_final_v3"" data-en="Naming chaos: profiles called 'Policy_new2_final_v3'">Naming-Chaos: Profile heißen „Policy_neu2_final_v3"</span></div>
+          <div class="symptom"><span class="symptom-icon">⚠️</span><span data-de="Keine Dokumentation — Wissen liegt bei einzelnen Personen" data-en="No documentation — knowledge sits with individuals">Keine Dokumentation — Wissen liegt bei einzelnen Personen</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Approach -->
   <section class="detail-section alt">
     <div class="detail-section-inner">
-      <h2>Mein Ansatz</h2>
-      <p class="section-intro">Strukturierte Sanierung in sechs Schritten — ohne Big-Bang-Umstellung, sondern schrittweise und risikoarm.</p>
+      <h2 data-de="Mein Ansatz" data-en="My Approach">Mein Ansatz</h2>
+      <p class="section-intro" data-de="Strukturierte Sanierung in sechs Schritten — ohne Big-Bang-Umstellung, sondern schrittweise und risikoarm." data-en="Structured remediation in six steps — no big-bang migration, but incremental and low-risk.">Strukturierte Sanierung in sechs Schritten — ohne Big-Bang-Umstellung, sondern schrittweise und risikoarm.</p>
       <div class="steps-grid">
-        <div class="step"><div class="step-num">1</div><div class="step-body"><h4>Tenant-Audit</h4><p>Vollständige Bestandsaufnahme aller Policies, Profile, Apps, Gruppen und Rollen. Identifikation von Duplikaten, Konflikten und ungenutzten Objekten.</p></div></div>
-        <div class="step"><div class="step-num">2</div><div class="step-body"><h4>RBAC-Modell entwerfen</h4><p>Definition von Admin-Rollen nach Verantwortlichkeit (Helpdesk, Endpoint-Admin, Security), Zuweisung von Scope Tags pro Team oder Standort.</p></div></div>
-        <div class="step"><div class="step-num">3</div><div class="step-body"><h4>Naming Convention festlegen</h4><p>Einheitliches Schema für alle Objekte: Plattform, Typ, Zielgruppe, Version. Beispiel: <span style="font-family:var(--fm);font-size:12px;color:var(--accent)">WIN-CFG-Security-Baseline-v1</span></p></div></div>
-        <div class="step"><div class="step-num">4</div><div class="step-body"><h4>Dynamische Gruppen aufbauen</h4><p>Entra-ID-basierte Dynamic Groups nach OS, Abteilung, Compliance-Status und Gerätekategorie. Kein manuelles Pflegen mehr.</p></div></div>
-        <div class="step"><div class="step-num">5</div><div class="step-body"><h4>Policy-Konsolidierung</h4><p>Duplikate zusammenführen, veraltete Objekte archivieren, Konflikte auflösen. Alles getestet in einer Pilot-Gruppe bevor Rollout auf alle Geräte.</p></div></div>
-        <div class="step"><div class="step-num">6</div><div class="step-body"><h4>Dokumentation &amp; Übergabe</h4><p>Runbooks für Admins, Architekturdiagramm des neuen Tenants, Onboarding-Guide für neue IT-Kollegen.</p></div></div>
+        <div class="step"><div class="step-num">1</div><div class="step-body"><h4 data-de="Tenant-Audit" data-en="Tenant Audit">Tenant-Audit</h4><p data-de="Vollständige Bestandsaufnahme aller Policies, Profile, Apps, Gruppen und Rollen. Identifikation von Duplikaten, Konflikten und ungenutzten Objekten." data-en="Full inventory of all policies, profiles, apps, groups and roles. Identification of duplicates, conflicts and unused objects.">Vollständige Bestandsaufnahme aller Policies, Profile, Apps, Gruppen und Rollen. Identifikation von Duplikaten, Konflikten und ungenutzten Objekten.</p></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-body"><h4 data-de="RBAC-Modell entwerfen" data-en="Design the RBAC Model">RBAC-Modell entwerfen</h4><p data-de="Definition von Admin-Rollen nach Verantwortlichkeit (Helpdesk, Endpoint-Admin, Security), Zuweisung von Scope Tags pro Team oder Standort." data-en="Definition of admin roles by responsibility (helpdesk, endpoint admin, security), assignment of scope tags per team or location.">Definition von Admin-Rollen nach Verantwortlichkeit (Helpdesk, Endpoint-Admin, Security), Zuweisung von Scope Tags pro Team oder Standort.</p></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-body"><h4 data-de="Naming Convention festlegen" data-en="Establish Naming Convention">Naming Convention festlegen</h4><p data-de="Einheitliches Schema für alle Objekte: Plattform, Typ, Zielgruppe, Version." data-en="Consistent schema for all objects: platform, type, target group, version.">Einheitliches Schema für alle Objekte: Plattform, Typ, Zielgruppe, Version. <span style="font-family:var(--fm);font-size:12px;color:var(--accent)">WIN-CFG-Security-Baseline-v1</span></p></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-body"><h4 data-de="Dynamische Gruppen aufbauen" data-en="Build Dynamic Groups">Dynamische Gruppen aufbauen</h4><p data-de="Entra-ID-basierte Dynamic Groups nach OS, Abteilung, Compliance-Status und Gerätekategorie. Kein manuelles Pflegen mehr." data-en="Entra ID-based dynamic groups by OS, department, compliance status and device category. No more manual maintenance.">Entra-ID-basierte Dynamic Groups nach OS, Abteilung, Compliance-Status und Gerätekategorie. Kein manuelles Pflegen mehr.</p></div></div>
+        <div class="step"><div class="step-num">5</div><div class="step-body"><h4 data-de="Policy-Konsolidierung" data-en="Policy Consolidation">Policy-Konsolidierung</h4><p data-de="Duplikate zusammenführen, veraltete Objekte archivieren, Konflikte auflösen. Alles getestet in einer Pilot-Gruppe bevor Rollout auf alle Geräte." data-en="Merge duplicates, archive outdated objects, resolve conflicts. Everything tested in a pilot group before rolling out to all devices.">Duplikate zusammenführen, veraltete Objekte archivieren, Konflikte auflösen. Alles getestet in einer Pilot-Gruppe bevor Rollout auf alle Geräte.</p></div></div>
+        <div class="step"><div class="step-num">6</div><div class="step-body"><h4 data-de="Dokumentation & Übergabe" data-en="Documentation & Handover">Dokumentation &amp; Übergabe</h4><p data-de="Runbooks für Admins, Architekturdiagramm des neuen Tenants, Onboarding-Guide für neue IT-Kollegen." data-en="Admin runbooks, architectural diagram of the new tenant, onboarding guide for new IT team members.">Runbooks für Admins, Architekturdiagramm des neuen Tenants, Onboarding-Guide für neue IT-Kollegen.</p></div></div>
       </div>
     </div>
   </section>
 
-  <!-- Deliverables -->
   <section class="detail-section">
     <div class="detail-section-inner">
-      <h2>Was Sie erhalten</h2>
-      <p class="section-intro">Konkrete Ergebnisse — keine PowerPoint-Folien, sondern eine funktionierende, dokumentierte Tenant-Architektur.</p>
+      <h2 data-de="Was Sie erhalten" data-en="What You Get">Was Sie erhalten</h2>
+      <p class="section-intro" data-de="Konkrete Ergebnisse — keine PowerPoint-Folien, sondern eine funktionierende, dokumentierte Tenant-Architektur." data-en="Concrete results — no PowerPoint slides, but a working, documented tenant architecture.">Konkrete Ergebnisse — keine PowerPoint-Folien, sondern eine funktionierende, dokumentierte Tenant-Architektur.</p>
       <div class="deliverables-grid">
-        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">📋</div><div><h4>Audit-Report</h4><p>Detaillierte Bestandsaufnahme mit allen Konflikten, Duplikaten und Optimierungspotenzialen.</p></div></div>
-        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">🏗️</div><div><h4>RBAC-Konzept</h4><p>Dokumentiertes Rollenmodell mit Scope Tags, Zuständigkeiten und Eskalationspfaden.</p></div></div>
-        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">✅</div><div><h4>Bereinigte Tenant-Konfiguration</h4><p>Konsolidierte Policies und Profile nach Naming Convention, getestet und deployed.</p></div></div>
-        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">📖</div><div><h4>Admin-Runbooks</h4><p>Schritt-für-Schritt-Anleitungen für wiederkehrende Aufgaben: Gerät hinzufügen, Policy ändern, Audit durchführen.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">📋</div><div><h4 data-de="Audit-Report" data-en="Audit Report">Audit-Report</h4><p data-de="Detaillierte Bestandsaufnahme mit allen Konflikten, Duplikaten und Optimierungspotenzialen." data-en="Detailed inventory of all conflicts, duplicates and optimisation potential.">Detaillierte Bestandsaufnahme mit allen Konflikten, Duplikaten und Optimierungspotenzialen.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">🏗️</div><div><h4 data-de="RBAC-Konzept" data-en="RBAC Concept">RBAC-Konzept</h4><p data-de="Dokumentiertes Rollenmodell mit Scope Tags, Zuständigkeiten und Eskalationspfaden." data-en="Documented role model with scope tags, responsibilities and escalation paths.">Dokumentiertes Rollenmodell mit Scope Tags, Zuständigkeiten und Eskalationspfaden.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">✅</div><div><h4 data-de="Bereinigte Tenant-Konfiguration" data-en="Cleaned-up Tenant Configuration">Bereinigte Tenant-Konfiguration</h4><p data-de="Konsolidierte Policies und Profile nach Naming Convention, getestet und deployed." data-en="Consolidated policies and profiles following naming convention, tested and deployed.">Konsolidierte Policies und Profile nach Naming Convention, getestet und deployed.</p></div></div>
+        <div class="deliverable"><div class="deliverable-icon" aria-hidden="true">📖</div><div><h4 data-de="Admin-Runbooks" data-en="Admin Runbooks">Admin-Runbooks</h4><p data-de="Schritt-für-Schritt-Anleitungen für wiederkehrende Aufgaben: Gerät hinzufügen, Policy ändern, Audit durchführen." data-en="Step-by-step guides for recurring tasks: add device, change policy, run audit.">Schritt-für-Schritt-Anleitungen für wiederkehrende Aufgaben: Gerät hinzufügen, Policy ändern, Audit durchführen.</p></div></div>
       </div>
       <div class="detail-tech">
-        <div class="detail-tech-label">Eingesetzte Technologien</div>
+        <div class="detail-tech-label" data-de="Eingesetzte Technologien" data-en="Technologies used">Eingesetzte Technologien</div>
         <div class="tg"><span class="tt c">Microsoft Intune</span><span class="tt c">Entra ID</span><span class="tt c">RBAC</span><span class="tt">Scope Tags</span><span class="tt">Dynamic Groups</span><span class="tt">Graph API</span><span class="tt">PowerShell</span></div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
   <section class="detail-cta">
     <div class="detail-cta-inner">
-      <h2>Tenant-Audit anfragen</h2>
-      <p>In einem kostenlosen Erstgespräch schauen wir gemeinsam auf Ihren Tenant und schätzen den Aufwand für eine Restrukturierung ein.</p>
+      <h2 data-de="Tenant-Audit anfragen" data-en="Request a Tenant Audit">Tenant-Audit anfragen</h2>
+      <p data-de="In einem kostenlosen Erstgespräch schauen wir gemeinsam auf Ihren Tenant und schätzen den Aufwand für eine Restrukturierung ein." data-en="In a free initial consultation, we'll look at your tenant together and estimate the effort required for a restructuring.">In einem kostenlosen Erstgespräch schauen wir gemeinsam auf Ihren Tenant und schätzen den Aufwand für eine Restrukturierung ein.</p>
       <div class="detail-cta-btns">
-        <a href="mailto:t.aydin6195@gmail.com" class="btn bp">
+        <a href="mailto:hello@aydin.consulting" class="btn bp">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          Jetzt anfragen
+          <span data-de="Jetzt anfragen" data-en="Get in touch">Jetzt anfragen</span>
         </a>
-        <a href="index.html#pain" class="btn bo">Weitere Pain Points</a>
+        <a href="index.html#pain" class="btn bo" data-de="Weitere Pain Points" data-en="More Pain Points">Weitere Pain Points</a>
       </div>
     </div>
   </section>

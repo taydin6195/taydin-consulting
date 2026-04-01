@@ -93,3 +93,35 @@ function toggleItem(el) {
     barObs.observe(b);
   });
 })();
+
+/* ─── Language switcher ──────────────────────────── */
+(function () {
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  var lang = localStorage.getItem('lang') || 'de';
+  applyLang(lang);
+
+  btn.addEventListener('click', function () {
+    lang = lang === 'de' ? 'en' : 'de';
+    localStorage.setItem('lang', lang);
+    applyLang(lang);
+  });
+
+  function applyLang(l) {
+    document.documentElement.lang = l;
+    document.documentElement.dataset.lang = l;
+    btn.textContent = l === 'de' ? 'EN' : 'DE';
+    btn.setAttribute('aria-label', l === 'de' ? 'Switch to English' : 'Auf Deutsch wechseln');
+
+    // Plain text nodes
+    document.querySelectorAll('[data-de]').forEach(function (el) {
+      el.textContent = l === 'de' ? el.dataset.de : el.dataset.en;
+    });
+
+    // Rich HTML nodes (data-de-html / data-en-html)
+    document.querySelectorAll('[data-de-html]').forEach(function (el) {
+      el.innerHTML = l === 'de' ? el.dataset.deHtml : el.dataset.enHtml;
+    });
+  }
+})();
